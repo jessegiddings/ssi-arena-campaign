@@ -298,7 +298,9 @@ export default function SSIArenaRedesigned() {
       <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight">
-            The people of Salt Spring Island have spoken.
+            The people of<br />
+            Salt Spring Island<br />
+            have spoken.
           </h1>
           <p className="text-lg md:text-xl text-slate-700 mb-6 max-w-4xl mx-auto leading-relaxed">
             When the community was surveyed in May of 2025, the three things at the top of everyone's list of community needs were: an ice rink, an indoor walking track, and a community fitness center.
