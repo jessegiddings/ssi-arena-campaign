@@ -297,7 +297,7 @@ export default function SSIArenaRedesigned() {
       {/* Community Survey Statement */}
       <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight uppercase">
             The people of<br />
             Salt Spring Island<br />
             have spoken.
