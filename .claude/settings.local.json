@@ -9,7 +9,8 @@
       "WebFetch(domain:www.ssiarena.com)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git rebase:*)"
+      "Bash(git rebase:*)",
+      "Bash(dig:*)"
     ],
     "deny": [],
     "ask": []

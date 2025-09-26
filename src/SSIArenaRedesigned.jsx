@@ -853,9 +853,9 @@ export default function SSIArenaRedesigned() {
                     { date: "Q4 2025", title: "Community Engagement", status: "active", description: "Gathering signatures and initial pledges" },
                     { date: "Q1 2026", title: "Feasibility Study", status: "upcoming", description: "Professional assessment and design refinement" },
                     { date: "Q2 2026", title: "Grant Applications", status: "upcoming", description: "Federal and provincial funding submissions" },
-                    { date: "Q3 2026", title: "Capital Campaign", status: "upcoming", description: "Major donor engagement and naming rights" },
-                    { date: "Q2 2027", title: "Groundbreaking", status: "upcoming", description: "Construction begins!" },
-                    { date: "2028", title: "Grand Opening", status: "upcoming", description: "Welcome to your new community arena!" }
+                    { date: "Q2 2027", title: "Capital Campaign", status: "upcoming", description: "Ongoing major donor engagement" },
+                    { date: "Q1 2028", title: "Groundbreaking", status: "upcoming", description: "Construction begins!" },
+                    { date: "2029/2030", title: "Grand Opening", status: "upcoming", description: "Welcome to your new community arena!" }
                   ].map((item, i) => (
                     <div key={i} className={`relative flex items-center ${i % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                       <div className={`w-5/12 ${i % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
