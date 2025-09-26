@@ -320,7 +320,7 @@ export default function SSIArenaRedesigned() {
                 Let's build a year‑round arena for Salt Spring Island
               </h2>
               <p className="mt-6 text-lg md:text-xl text-slate-700">
-                We propose a <span className="font-semibold text-sky-700">community ice rink</span>, an <span className="font-semibold text-sky-700">indoor walking track</span>, and a <span className="font-semibold text-sky-700">fitness mezzanine</span> open to everyone—kids, families, and seniors alike.
+                We propose a <span className="font-semibold text-sky-700">community ice rink</span>, an <span className="font-semibold text-sky-700">indoor walking track</span>, a <span className="font-semibold text-sky-700">fitness center</span>, and a <span className="font-semibold text-sky-700">curling rink</span> open to everyone—kids, families, and seniors alike.
               </p>
               <ul className="mt-8 space-y-4 text-slate-700">
                 <li className="flex items-start gap-3">
@@ -329,7 +329,7 @@ export default function SSIArenaRedesigned() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 mt-0.5 text-sky-600 flex-shrink-0" />
-                  <span className="text-lg">Home ice for local hockey, figure skating, and lacrosse events</span>
+                  <span className="text-lg">Home ice for local hockey, figure skating, and curling, and summer lacrosse, rollerblading, and roller skating, ball hockey, and other indoor events</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 mt-0.5 text-sky-600 flex-shrink-0" />
@@ -422,7 +422,7 @@ export default function SSIArenaRedesigned() {
                   className="w-full rounded-lg"
                 />
                 <p className="text-sm text-slate-600 text-center mt-3">
-                  The proposed 50,000 sq ft arena (highlighted in red) would be built adjacent to the existing tennis courts, integrating seamlessly with the current Rainbow Recreation Centre facilities.
+                  The proposed arena would integrate seamlessly with the current Rainbow Recreation Centre facilities.
                 </p>
               </div>
             </div>
@@ -505,7 +505,7 @@ export default function SSIArenaRedesigned() {
             {[
               {
                 title: "Winter Ice Sports",
-                description: "NHL-sized rink for hockey leagues, figure skating, public skating, and learn-to-skate programs",
+                description: "NHL-sized rink for hockey leagues, figure skating, curling, public skating, and learn-to-skate programs",
                 icon: <Sparkles className="w-6 h-6" />,
                 photo: "Ice hockey game in action",
                 image: "/hockeybench1.jpg"
@@ -525,15 +525,15 @@ export default function SSIArenaRedesigned() {
                 image: "/fitness1.jpg"
               },
               {
-                title: "Summer Lacrosse",
-                description: "Converts to box lacrosse, ball hockey, and roller sports in the off-season",
+                title: "Summer Sports",
+                description: "Converts to box lacrosse, ball hockey, and roller sports in offseason",
                 icon: <Users className="w-6 h-6" />,
                 photo: "Lacrosse game in arena",
                 image: "/lacrosse.jpg"
               },
               {
                 title: "Community Events",
-                description: "Concerts, trade shows, farmers markets, and large gatherings for up to 1,500 people",
+                description: "Concerts, trade shows, farmers markets, and large gatherings for 1,500 to 3,000 people",
                 icon: <Calendar className="w-6 h-6" />,
                 photo: "Community event in arena",
                 image: "/tradeshow.webp"
