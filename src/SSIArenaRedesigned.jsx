@@ -875,6 +875,17 @@ export default function SSIArenaRedesigned() {
             </CardContent>
           </Card>
         </div>
+
+        {/* Organization Logo */}
+        <div className="mt-16 text-center">
+          <div className="max-w-md mx-auto">
+            <img
+              src="/ssicaalogo.png"
+              alt="Salt Spring Island Community Arena Association Logo"
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
