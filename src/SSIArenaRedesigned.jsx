@@ -896,7 +896,7 @@ export default function SSIArenaRedesigned() {
               <h3 className="font-bold mb-4">Contact</h3>
               <p className="text-slate-400 text-sm">
                 Salt Spring Island Community Arena Association<br />
-                info@ssiarena.com<br />
+                saltspringislandarena@gmail.com<br />
                 Registered Non-Profit Society
               </p>
             </div>
