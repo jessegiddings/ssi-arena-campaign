@@ -417,8 +417,8 @@ export default function SSIArenaRedesigned() {
               </h3>
               <div className="bg-white rounded-xl shadow-lg p-4">
                 <img
-                  src="/rainbow_masterplan_with_arena.jpg"
-                  alt="Rainbow Recreation Centre Master Plan showing proposed 50,000 sq ft arena location next to existing tennis courts"
+                  src="/rainbow_masterplan_with_arena_curling.png"
+                  alt="Rainbow Recreation Centre Master Plan showing proposed 50,000 sq ft arena location with curling sheets next to existing tennis courts"
                   className="w-full rounded-lg"
                 />
                 <p className="text-sm text-slate-600 text-center mt-3">
