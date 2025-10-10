@@ -43,7 +43,6 @@ const PLEDGE_TIERS = [
 
 // Baseline signature count (offline signatures collected before website launch)
 const BASELINE_SIGNATURE_OFFSET = 400;
-console.log('FILE LOADED - BASELINE_SIGNATURE_OFFSET is:', BASELINE_SIGNATURE_OFFSET);
 
 // Default progress data (fallback if Supabase is not configured)
 const DEFAULT_PROGRESS_DATA = {
@@ -125,13 +124,8 @@ export default function SSIArenaRedesigned() {
   useEffect(() => {
     const loadStats = async () => {
       try {
-        console.log('Loading campaign stats...');
         const stats = await getCampaignStats();
-        console.log('Loaded stats:', stats);
-        console.log('BASELINE_SIGNATURE_OFFSET:', BASELINE_SIGNATURE_OFFSET);
         if (stats) {
-          console.log('stats.signatures before offset:', stats.signatures);
-          console.log('Adding offset:', stats.signatures, '+', BASELINE_SIGNATURE_OFFSET, '=', stats.signatures + BASELINE_SIGNATURE_OFFSET);
           const newProgressData = {
             signatures: stats.signatures + BASELINE_SIGNATURE_OFFSET,
             signatureGoal: stats.signatureGoal,
@@ -140,7 +134,6 @@ export default function SSIArenaRedesigned() {
             emails: stats.signatures + BASELINE_SIGNATURE_OFFSET, // Using signatures as email count for now
             emailGoal: 1000
           };
-          console.log('Setting progress data:', newProgressData);
           setProgressData(newProgressData);
         } else {
           console.log('No stats returned, using default data');
@@ -155,9 +148,7 @@ export default function SSIArenaRedesigned() {
     loadStats();
 
     // Set up real-time subscription
-    console.log('Setting up real-time subscription...');
     const unsubscribe = subscribeToStats((stats) => {
-      console.log('Real-time update received:', stats);
       const newProgressData = {
         signatures: stats.signatures + BASELINE_SIGNATURE_OFFSET,
         signatureGoal: stats.signatureGoal,
@@ -166,12 +157,10 @@ export default function SSIArenaRedesigned() {
         emails: stats.signatures + BASELINE_SIGNATURE_OFFSET, // Using signatures as email count
         emailGoal: 1000
       };
-      console.log('Updating progress data in real-time:', newProgressData);
       setProgressData(newProgressData);
     });
 
     return () => {
-      console.log('Cleaning up real-time subscription');
       unsubscribe();
     };
   }, []);
