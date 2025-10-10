@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { CheckCircle2, Mail, Users, HeartHandshake, PiggyBank, BarChart3, ShieldCheck, Send, Trophy, MapPin, Calendar, DollarSign, Target, TrendingUp, Building2, Mountain, Sparkles, Clock, Star } from "lucide-react";
 import { submitSignature, submitPledge, getCampaignStats, subscribeToStats, getPledgeTier } from "./lib/campaignService.js";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,11 +41,15 @@ const PLEDGE_TIERS = [
   { label: "Major", value: 25000, description: "Visionary" },
 ];
 
+// Baseline signature count (offline signatures collected before website launch)
+const BASELINE_SIGNATURE_OFFSET = 400;
+console.log('FILE LOADED - BASELINE_SIGNATURE_OFFSET is:', BASELINE_SIGNATURE_OFFSET);
+
 // Default progress data (fallback if Supabase is not configured)
 const DEFAULT_PROGRESS_DATA = {
   pledgeAmount: 34750,
   pledgeGoal: 150000,
-  signatures: 487,
+  signatures: 407,
   signatureGoal: 2000,
   emails: 203,
   emailGoal: 1000
@@ -123,13 +128,16 @@ export default function SSIArenaRedesigned() {
         console.log('Loading campaign stats...');
         const stats = await getCampaignStats();
         console.log('Loaded stats:', stats);
+        console.log('BASELINE_SIGNATURE_OFFSET:', BASELINE_SIGNATURE_OFFSET);
         if (stats) {
+          console.log('stats.signatures before offset:', stats.signatures);
+          console.log('Adding offset:', stats.signatures, '+', BASELINE_SIGNATURE_OFFSET, '=', stats.signatures + BASELINE_SIGNATURE_OFFSET);
           const newProgressData = {
-            signatures: stats.signatures,
+            signatures: stats.signatures + BASELINE_SIGNATURE_OFFSET,
             signatureGoal: stats.signatureGoal,
             pledgeAmount: stats.pledgeAmount,
             pledgeGoal: stats.pledgeGoal,
-            emails: stats.signatures, // Using signatures as email count for now
+            emails: stats.signatures + BASELINE_SIGNATURE_OFFSET, // Using signatures as email count for now
             emailGoal: 1000
           };
           console.log('Setting progress data:', newProgressData);
@@ -151,11 +159,11 @@ export default function SSIArenaRedesigned() {
     const unsubscribe = subscribeToStats((stats) => {
       console.log('Real-time update received:', stats);
       const newProgressData = {
-        signatures: stats.signatures,
+        signatures: stats.signatures + BASELINE_SIGNATURE_OFFSET,
         signatureGoal: stats.signatureGoal,
         pledgeAmount: stats.pledgeAmount,
         pledgeGoal: stats.pledgeGoal,
-        emails: stats.signatures, // Using signatures as email count
+        emails: stats.signatures + BASELINE_SIGNATURE_OFFSET, // Using signatures as email count
         emailGoal: 1000
       };
       console.log('Updating progress data in real-time:', newProgressData);
@@ -288,6 +296,7 @@ export default function SSIArenaRedesigned() {
           <nav className="hidden md:flex gap-6 text-sm font-medium">
             <button onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Vision</button>
             <button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Benefits</button>
+            <Link to="/community-benefits" className="hover:text-sky-600 transition-colors">Research</Link>
             <button onClick={() => document.getElementById('progress')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Progress</button>
             <button onClick={() => document.getElementById('sign')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Sign & Pledge</button>
           </nav>
@@ -497,9 +506,22 @@ export default function SSIArenaRedesigned() {
       <section id="features" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-4">Year-Round Community Benefits</h2>
-          <p className="text-center text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
+          <p className="text-center text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
             More than just an ice rink - a true multi-generational, multi-season community hub
           </p>
+
+          <div className="flex justify-center mb-12">
+            <Link to="/community-benefits">
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 py-4 text-base border-2 border-sky-600 text-sky-700 hover:bg-sky-50 shadow-lg font-semibold"
+              >
+                <BarChart3 className="w-5 h-5 mr-2" />
+                See Research-Backed Community Benefits
+              </Button>
+            </Link>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -905,6 +927,7 @@ export default function SSIArenaRedesigned() {
               <ul className="text-slate-400 text-sm space-y-2">
                 <li><button onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Vision</button></li>
                 <li><button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Features</button></li>
+                <li><Link to="/community-benefits" className="hover:text-white transition-colors">Community Benefits</Link></li>
                 <li><button onClick={() => document.getElementById('progress')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Progress</button></li>
                 <li><button onClick={() => document.getElementById('sign')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Sign Petition</button></li>
               </ul>
