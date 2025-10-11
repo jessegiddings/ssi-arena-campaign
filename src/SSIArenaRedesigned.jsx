@@ -811,11 +811,11 @@ export default function SSIArenaRedesigned() {
                 const stats = await getCampaignStats();
                 if (stats) {
                   setProgressData({
-                    signatures: stats.signatures,
+                    signatures: stats.signatures + BASELINE_SIGNATURE_OFFSET,
                     signatureGoal: stats.signatureGoal,
                     pledgeAmount: stats.pledgeAmount,
                     pledgeGoal: stats.pledgeGoal,
-                    emails: stats.signatures,
+                    emails: stats.signatures + BASELINE_SIGNATURE_OFFSET,
                     emailGoal: 1000
                   });
                 }
