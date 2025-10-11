@@ -12,7 +12,8 @@
       "Bash(git rebase:*)",
       "Bash(dig:*)",
       "WebSearch",
-      "WebFetch(domain:www.trainerize.com)"
+      "WebFetch(domain:www.trainerize.com)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
