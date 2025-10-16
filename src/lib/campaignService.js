@@ -50,19 +50,33 @@ export async function submitPledge(signatureId, pledgeData) {
 // Get current campaign statistics
 export async function getCampaignStats() {
   try {
-    const { data, error } = await supabase
+    // Count signatures directly from signatures table
+    const { count: signatureCount, error: sigError } = await supabase
+      .from('signatures')
+      .select('*', { count: 'exact', head: true })
+
+    if (sigError) throw sigError
+
+    // Get pledge data and goals from campaign_stats if it exists
+    const { data: statsData } = await supabase
       .from('campaign_stats')
       .select('*')
       .single()
 
-    if (error) throw error
+    // Calculate total pledge amount directly from pledges table
+    const { data: pledges, error: pledgeError } = await supabase
+      .from('pledges')
+      .select('amount')
+
+    const totalPledgeAmount = pledges?.reduce((sum, pledge) => sum + (pledge.amount || 0), 0) || 0
+
     return {
-      signatures: data.total_signatures,
-      pledges: data.total_pledges,
-      pledgeAmount: data.total_pledge_amount / 100, // Convert from cents
-      signatureGoal: data.signature_goal,
-      pledgeGoal: data.pledge_goal / 100, // Convert from cents
-      lastUpdated: data.last_updated
+      signatures: signatureCount || 0,
+      pledges: pledges?.length || 0,
+      pledgeAmount: totalPledgeAmount / 100, // Convert from cents
+      signatureGoal: statsData?.signature_goal || 2000,
+      pledgeGoal: (statsData?.pledge_goal || 15000000) / 100, // Convert from cents
+      lastUpdated: new Date().toISOString()
     }
   } catch (error) {
     console.error('Error fetching campaign stats:', error)
@@ -73,24 +87,33 @@ export async function getCampaignStats() {
 // Subscribe to real-time campaign stats updates
 export function subscribeToStats(callback) {
   const subscription = supabase
-    .channel('campaign-stats')
+    .channel('campaign-updates')
     .on(
       'postgres_changes',
       {
         event: '*',
         schema: 'public',
-        table: 'campaign_stats'
+        table: 'signatures'
       },
-      (payload) => {
-        if (payload.new) {
-          const stats = {
-            signatures: payload.new.total_signatures,
-            pledges: payload.new.total_pledges,
-            pledgeAmount: payload.new.total_pledge_amount / 100,
-            signatureGoal: payload.new.signature_goal,
-            pledgeGoal: payload.new.pledge_goal / 100,
-            lastUpdated: payload.new.last_updated
-          }
+      async () => {
+        // When signatures table changes, fetch fresh stats
+        const stats = await getCampaignStats()
+        if (stats) {
+          callback(stats)
+        }
+      }
+    )
+    .on(
+      'postgres_changes',
+      {
+        event: '*',
+        schema: 'public',
+        table: 'pledges'
+      },
+      async () => {
+        // When pledges table changes, fetch fresh stats
+        const stats = await getCampaignStats()
+        if (stats) {
           callback(stats)
         }
       }
