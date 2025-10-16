@@ -562,7 +562,7 @@ export default function SSIArenaRedesigned() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-8">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
                       {feature.icon}
@@ -827,7 +827,7 @@ export default function SSIArenaRedesigned() {
 
           <div className="grid md:grid-cols-2 gap-12 mb-12 max-w-4xl mx-auto">
             <Card className="overflow-hidden">
-              <CardContent className="p-8">
+              <CardContent className="p-10">
                 <ProgressMeter
                   current={progressData.signatures}
                   goal={progressData.signatureGoal}
@@ -838,7 +838,7 @@ export default function SSIArenaRedesigned() {
             </Card>
 
             <Card className="overflow-hidden">
-              <CardContent className="p-8">
+              <CardContent className="p-10">
                 <ProgressMeter
                   current={progressData.pledgeAmount}
                   goal={progressData.pledgeGoal}
@@ -852,7 +852,7 @@ export default function SSIArenaRedesigned() {
 
           {/* Timeline */}
           <Card className="overflow-hidden">
-            <CardContent className="p-8">
+            <CardContent className="p-10">
               <h3 className="text-2xl font-bold mb-6 text-center">Project Timeline</h3>
               <div className="relative">
                 <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-sky-200"></div>

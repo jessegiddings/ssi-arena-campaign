@@ -89,135 +89,6 @@ export default function CommunityBenefits() {
 
   const benefitCategories = [
     {
-      title: "Evidence-Based Physical Activity Promotion",
-      icon: <Activity className="w-8 h-8" />,
-      color: "from-sky-500 to-blue-600",
-      benefits: [
-        {
-          title: "CDC/CPSTF Recommended Approach",
-          icon: <Shield className="w-6 h-6" />,
-          description: "Combining activity-friendly routes (sidewalks, bike lanes) with everyday destinations like a recreation centre increases population physical activity. This recommendation is based on systematic review of 90 studies.",
-          citation: "U.S. Community Preventive Services Task Force",
-          sources: [
-            { label: "CDC Brief", url: "https://www.cdc.gov/physicalactivity/community-strategies/activity-friendly-routes-to-everyday-destinations.html" },
-            { label: "CPSTF Finding", url: "https://www.thecommunityguide.org/findings/physical-activity-built-environment-approaches" }
-          ]
-        },
-        {
-          title: "WHO Global Physical Activity Guidelines",
-          icon: <Heart className="w-6 h-6" />,
-          description: "Regular physical activity across the lifespan reduces risk of cardiovascular disease, type 2 diabetes, several cancers, and improves mental health and sleep. Benefits clearly outweigh risks.",
-          citation: "WHO recommends 150–300 min/week for adults",
-          sources: [
-            { label: "WHO 2020 Guidelines", url: "https://www.who.int/publications/i/item/9789240015128" },
-            { label: "PMC", url: "https://pmc.ncbi.nlm.nih.gov/" }
-          ]
-        },
-        {
-          title: "Access Increases Activity & Reduces Inequalities",
-          icon: <Users className="w-6 h-6" />,
-          description: "Free or low-cost access to leisure facilities increases physical activity and reduces health inequalities. Access to community facilities is positively associated with meeting American Heart Association guidelines.",
-          citation: "UK natural experiment & YMCA-based RCT evidence",
-          sources: [
-            { label: "BMJ Journal", url: "https://jech.bmj.com/" },
-            { label: "PMC Studies", url: "https://pmc.ncbi.nlm.nih.gov/" }
-          ]
-        }
-      ]
-    },
-    {
-      title: "Canadian Healthcare Cost Savings",
-      icon: <DollarSign className="w-8 h-8" />,
-      color: "from-emerald-500 to-green-600",
-      benefits: [
-        {
-          title: "Physical Inactivity Costs Billions Annually",
-          icon: <TrendingUp className="w-6 h-6" />,
-          description: "Foundational CMAJ research attributes approximately $2.1B per year in direct healthcare costs to physical inactivity (2.5% of direct costs). Updated modelling places 2009 costs at $6.8B total (direct $2.4B + indirect $4.3B).",
-          citation: "Canadian Medical Association Journal",
-          sources: [
-            { label: "CMAJ Article", url: "https://www.cmaj.ca/content/163/11/1435" },
-            { label: "Janssen 2012", url: "https://www150.statcan.gc.ca/n1/pub/82-003-x/2012001/article/11606-eng.htm" }
-          ]
-        },
-        {
-          title: "Measurable Savings from Activity Increases",
-          icon: <Shield className="w-6 h-6" />,
-          description: "CFLRI/CPRA's 'Price of Inactivity' (2023) indicates $629M per year in potential savings from just a 10-point drop in physical inactivity rates. Even modest population-level improvements deliver measurable economic benefits.",
-          citation: "Canadian Fitness & Lifestyle Research Institute",
-          sources: [
-            { label: "Summary PDF", url: "https://lin.ca/resources/the-price-of-inactivity/" },
-            { label: "Full Report", url: "https://lin.ca/resources/the-price-of-inactivity/" }
-          ]
-        },
-        {
-          title: "Rising Healthcare Spending Context",
-          icon: <AlertCircle className="w-6 h-6" />,
-          description: "CIHI projects Canada's health spending to reach $372B in 2024, with 5.7% growth. Any local prevention that reduces chronic disease and falls helps bend the cost curve.",
-          citation: "Canadian Institute for Health Information, 2024",
-          sources: [
-            { label: "CIHI Snapshot", url: "https://www.cihi.ca/en/national-health-expenditure-trends-2024-snapshot" },
-            { label: "Media Release", url: "https://www.cihi.ca/" }
-          ]
-        }
-      ]
-    },
-    {
-      title: "Senior Health: Falls Prevention",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-rose-500 to-pink-600",
-      benefits: [
-        {
-          title: "24–34% Reduction in Falls",
-          icon: <Activity className="w-6 h-6" />,
-          description: "Community exercise programs for older adults reduce falls by approximately 24–34%, with strongest effects from balance/functional training combined with strength exercises. Falls are one of the most expensive and life-altering events for seniors.",
-          citation: "Cochrane systematic review—high-certainty evidence",
-          sources: [
-            { label: "Cochrane Review", url: "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013740.pub2/full" },
-            { label: "2024 Overview", url: "https://pmc.ncbi.nlm.nih.gov/" }
-          ]
-        },
-        {
-          title: "Indoor Walking Track Benefits",
-          icon: <Heart className="w-6 h-6" />,
-          description: "Group-based programs delivered in safe, climate-controlled environments (like indoor walking tracks, tai chi classes, and strength training) are ideal delivery modes for fall prevention. CDC's STEADI program compiles effective approaches.",
-          citation: "CDC STEADI Compendium 2023",
-          sources: [
-            { label: "CDC STEADI PDF", url: "https://www.cdc.gov/steadi/" },
-            { label: "Cochrane", url: "https://www.cochranelibrary.com/" }
-          ]
-        }
-      ]
-    },
-    {
-      title: "Mental Health Treatment",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-indigo-600",
-      benefits: [
-        {
-          title: "Exercise as Effective Treatment for Depression",
-          icon: <Brain className="w-6 h-6" />,
-          description: "Exercise reduces depressive symptoms with moderate effect compared to no treatment. Walking/jogging, yoga, and strength training show the strongest therapeutic effects—all activities easily delivered in a community recreation centre.",
-          citation: "BMJ 2024 umbrella review & Cochrane evidence",
-          sources: [
-            { label: "BMJ News 2024", url: "https://www.bmj.com/company/newsroom/exercise-more-effective-than-medicines-to-manage-mental-health/" },
-            { label: "Noetel et al. (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/" },
-            { label: "BJSM 2023", url: "https://bjsm.bmj.com/content/57/18/1203" }
-          ]
-        },
-        {
-          title: "Programs Accessible to All",
-          icon: <Users className="w-6 h-6" />,
-          description: "Community recreation centres can offer evidence-based mental health programming through walking groups, yoga classes, and strength training—activities shown in peer-reviewed research to be therapeutic interventions.",
-          citation: "Systematic reviews & meta-analyses",
-          sources: [
-            { label: "BJSM Overview", url: "https://bjsm.bmj.com/" },
-            { label: "Cochrane", url: "https://www.cochranelibrary.com/" }
-          ]
-        }
-      ]
-    },
-    {
       title: "Youth Development & Community Safety",
       icon: <GraduationCap className="w-8 h-8" />,
       color: "from-amber-500 to-orange-600",
@@ -261,6 +132,135 @@ export default function CommunityBenefits() {
           sources: [
             { label: "ParticipACTION 2024", url: "https://www.participaction.com/en-ca/benefits-and-guidelines/children-and-youth" },
             { label: "Technical Report PDF", url: "https://www.participaction.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "Mental Health Treatment",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-purple-500 to-indigo-600",
+      benefits: [
+        {
+          title: "Exercise as Effective Treatment for Depression",
+          icon: <Brain className="w-6 h-6" />,
+          description: "Exercise reduces depressive symptoms with moderate effect compared to no treatment. Walking/jogging, yoga, and strength training show the strongest therapeutic effects—all activities easily delivered in a community recreation centre.",
+          citation: "BMJ 2024 umbrella review & Cochrane evidence",
+          sources: [
+            { label: "BMJ News 2024", url: "https://www.bmj.com/company/newsroom/exercise-more-effective-than-medicines-to-manage-mental-health/" },
+            { label: "Noetel et al. (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/" },
+            { label: "BJSM 2023", url: "https://bjsm.bmj.com/content/57/18/1203" }
+          ]
+        },
+        {
+          title: "Programs Accessible to All",
+          icon: <Users className="w-6 h-6" />,
+          description: "Community recreation centres can offer evidence-based mental health programming through walking groups, yoga classes, and strength training—activities shown in peer-reviewed research to be therapeutic interventions.",
+          citation: "Systematic reviews & meta-analyses",
+          sources: [
+            { label: "BJSM Overview", url: "https://bjsm.bmj.com/" },
+            { label: "Cochrane", url: "https://www.cochranelibrary.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "Senior Health: Falls Prevention",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-600",
+      benefits: [
+        {
+          title: "24–34% Reduction in Falls",
+          icon: <Activity className="w-6 h-6" />,
+          description: "Community exercise programs for older adults reduce falls by approximately 24–34%, with strongest effects from balance/functional training combined with strength exercises. Falls are one of the most expensive and life-altering events for seniors.",
+          citation: "Cochrane systematic review—high-certainty evidence",
+          sources: [
+            { label: "Cochrane Review", url: "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013740.pub2/full" },
+            { label: "2024 Overview", url: "https://pmc.ncbi.nlm.nih.gov/" }
+          ]
+        },
+        {
+          title: "Indoor Walking Track Benefits",
+          icon: <Heart className="w-6 h-6" />,
+          description: "Group-based programs delivered in safe, climate-controlled environments (like indoor walking tracks, tai chi classes, and strength training) are ideal delivery modes for fall prevention. CDC's STEADI program compiles effective approaches.",
+          citation: "CDC STEADI Compendium 2023",
+          sources: [
+            { label: "CDC STEADI PDF", url: "https://www.cdc.gov/steadi/" },
+            { label: "Cochrane", url: "https://www.cochranelibrary.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "Canadian Healthcare Cost Savings",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-600",
+      benefits: [
+        {
+          title: "Physical Inactivity Costs Billions Annually",
+          icon: <TrendingUp className="w-6 h-6" />,
+          description: "Foundational CMAJ research attributes approximately $2.1B per year in direct healthcare costs to physical inactivity (2.5% of direct costs). Updated modelling places 2009 costs at $6.8B total (direct $2.4B + indirect $4.3B).",
+          citation: "Canadian Medical Association Journal",
+          sources: [
+            { label: "CMAJ Article", url: "https://www.cmaj.ca/content/163/11/1435" },
+            { label: "Janssen 2012", url: "https://www150.statcan.gc.ca/n1/pub/82-003-x/2012001/article/11606-eng.htm" }
+          ]
+        },
+        {
+          title: "Measurable Savings from Activity Increases",
+          icon: <Shield className="w-6 h-6" />,
+          description: "CFLRI/CPRA's 'Price of Inactivity' (2023) indicates $629M per year in potential savings from just a 10-point drop in physical inactivity rates. Even modest population-level improvements deliver measurable economic benefits.",
+          citation: "Canadian Fitness & Lifestyle Research Institute",
+          sources: [
+            { label: "Summary PDF", url: "https://lin.ca/resources/the-price-of-inactivity/" },
+            { label: "Full Report", url: "https://lin.ca/resources/the-price-of-inactivity/" }
+          ]
+        },
+        {
+          title: "Rising Healthcare Spending Context",
+          icon: <AlertCircle className="w-6 h-6" />,
+          description: "CIHI projects Canada's health spending to reach $372B in 2024, with 5.7% growth. Any local prevention that reduces chronic disease and falls helps bend the cost curve.",
+          citation: "Canadian Institute for Health Information, 2024",
+          sources: [
+            { label: "CIHI Snapshot", url: "https://www.cihi.ca/en/national-health-expenditure-trends-2024-snapshot" },
+            { label: "Media Release", url: "https://www.cihi.ca/" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "Evidence-Based Physical Activity Promotion",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-sky-500 to-blue-600",
+      benefits: [
+        {
+          title: "CDC/CPSTF Recommended Approach",
+          icon: <Shield className="w-6 h-6" />,
+          description: "Combining activity-friendly routes (sidewalks, bike lanes) with everyday destinations like a recreation centre increases population physical activity. This recommendation is based on systematic review of 90 studies.",
+          citation: "U.S. Community Preventive Services Task Force",
+          sources: [
+            { label: "CDC Brief", url: "https://www.cdc.gov/physicalactivity/community-strategies/activity-friendly-routes-to-everyday-destinations.html" },
+            { label: "CPSTF Finding", url: "https://www.thecommunityguide.org/findings/physical-activity-built-environment-approaches" }
+          ]
+        },
+        {
+          title: "WHO Global Physical Activity Guidelines",
+          icon: <Heart className="w-6 h-6" />,
+          description: "Regular physical activity across the lifespan reduces risk of cardiovascular disease, type 2 diabetes, several cancers, and improves mental health and sleep. Benefits clearly outweigh risks.",
+          citation: "WHO recommends 150–300 min/week for adults",
+          sources: [
+            { label: "WHO 2020 Guidelines", url: "https://www.who.int/publications/i/item/9789240015128" },
+            { label: "PMC", url: "https://pmc.ncbi.nlm.nih.gov/" }
+          ]
+        },
+        {
+          title: "Access Increases Activity & Reduces Inequalities",
+          icon: <Users className="w-6 h-6" />,
+          description: "Free or low-cost access to leisure facilities increases physical activity and reduces health inequalities. Access to community facilities is positively associated with meeting American Heart Association guidelines.",
+          citation: "UK natural experiment & YMCA-based RCT evidence",
+          sources: [
+            { label: "BMJ Journal", url: "https://jech.bmj.com/" },
+            { label: "PMC Studies", url: "https://pmc.ncbi.nlm.nih.gov/" }
           ]
         }
       ]
@@ -311,7 +311,7 @@ export default function CommunityBenefits() {
           {/* Canadian Context Alert */}
           <div className="grid md:grid-cols-2 gap-4 mt-8">
             <Card className="border-l-4 border-sky-600 bg-sky-50">
-              <CardContent className="p-6">
+              <CardContent className="p-8">
                 <div className="flex items-start gap-3">
                   <AlertCircle className="w-6 h-6 text-sky-600 mt-1 flex-shrink-0" />
                   <div>
@@ -331,7 +331,7 @@ export default function CommunityBenefits() {
             </Card>
 
             <Card className="border-l-4 border-emerald-600 bg-emerald-50">
-              <CardContent className="p-6">
+              <CardContent className="p-8">
                 <div className="flex items-start gap-3">
                   <TrendingUp className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
                   <div>
@@ -356,14 +356,10 @@ export default function CommunityBenefits() {
       {/* Executive Takeaways */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-8">
-            <FileText className="w-8 h-8 text-sky-600" />
-            <h2 className="text-3xl font-bold">Executive Takeaways</h2>
-          </div>
           <div className="space-y-4">
             {executiveTakeaways.map((takeaway, i) => (
               <Card key={i} className="border-l-4 border-sky-500">
-                <CardContent className="p-6">
+                <CardContent className="p-8">
                   <p className="text-slate-800 leading-relaxed mb-3">{takeaway.text}</p>
                   <div className="flex flex-wrap gap-2">
                     {takeaway.sources.map((source, j) => (
@@ -420,7 +416,7 @@ export default function CommunityBenefits() {
             <div className="grid md:grid-cols-2 gap-8">
               {category.benefits.map((benefit, i) => (
                 <Card key={i} className="hover:shadow-xl transition-shadow duration-300">
-                  <CardContent className="p-8">
+                  <CardContent className="p-10">
                     <div className="flex items-start gap-4 mb-4">
                       <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 flex items-center justify-center text-slate-700 flex-shrink-0`}>
                         {benefit.icon}
@@ -459,7 +455,7 @@ export default function CommunityBenefits() {
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">Comprehensive Research Sources</h2>
           <Card>
-            <CardContent className="p-8">
+            <CardContent className="p-10">
               <p className="text-slate-700 mb-6 leading-relaxed">
                 This page synthesizes evidence from the highest-quality health research institutions and peer-reviewed
                 medical journals. All sources are publicly accessible and represent the current scientific consensus

@@ -182,7 +182,7 @@ export default function Petition() {
               <p className="text-sky-100">Add your support for the Salt Spring Island Arena</p>
             </div>
 
-            <CardContent className="pt-10 pb-8 px-8">
+            <CardContent className="pt-10 pb-8 px-10">
               {submitted === 'signature' ? (
                 <div className="py-12 text-center">
                   <CheckCircle2 className="w-20 h-20 text-green-500 mx-auto mb-6" />
@@ -302,7 +302,7 @@ export default function Petition() {
               <p className="text-emerald-100">Help us demonstrate community capacity</p>
             </div>
 
-            <CardContent className="pt-10 pb-8 px-8">
+            <CardContent className="pt-10 pb-8 px-10">
               {submitted === 'pledge' ? (
                 <div className="py-12 text-center">
                   <CheckCircle2 className="w-20 h-20 text-green-500 mx-auto mb-6" />
