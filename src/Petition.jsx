@@ -159,16 +159,25 @@ export default function Petition() {
       {/* Hero Section */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight uppercase tracking-wide">
             Make Your Voice Heard
           </h1>
           <p className="text-2xl md:text-3xl text-slate-700 mb-8">
             Sign the petition for Salt Spring Island to get an arena.
           </p>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
             Join hundreds of island residents in supporting a year-round community recreation facility
             that will serve families, youth, and seniors alike.
           </p>
+          <Link to="/">
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-full px-8 py-6 text-base border-2 border-sky-600 text-sky-700 hover:bg-sky-50 shadow-lg font-semibold"
+            >
+              Learn More About the Project →
+            </Button>
+          </Link>
         </div>
       </section>
 
