@@ -87,53 +87,6 @@ export default function CommunityBenefits() {
     }
   ];
 
-  const proofPoints = [
-    {
-      quote: "The Community Preventive Services Task Force recommends connecting activity-friendly routes to everyday destinations—like a community rec centre—to increase population physical activity.",
-      sources: [
-        { label: "CDC/CPSTF", url: "https://www.thecommunityguide.org/findings/physical-activity-built-environment-approaches" }
-      ]
-    },
-    {
-      quote: "Exercise is an effective treatment for depression; walking/jogging, yoga, and strength training show the strongest effects.",
-      sources: [
-        { label: "BMJ 2024", url: "https://www.bmj.com/company/newsroom/exercise-more-effective-than-medicines-to-manage-mental-health/" },
-        { label: "Noetel et al. (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/" },
-        { label: "BJSM 2023", url: "https://bjsm.bmj.com/content/57/18/1203" }
-      ]
-    },
-    {
-      quote: "Community exercise programs for older adults reduce falls by 24–34%, especially programs emphasizing balance/functional training and strength.",
-      sources: [
-        { label: "Cochrane", url: "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013740.pub2/full" },
-        { label: "2024 Overview", url: "https://pmc.ncbi.nlm.nih.gov/" }
-      ]
-    },
-    {
-      quote: "In Canada, physical inactivity costs are substantial—classic estimate $2.1B/yr in direct costs; more recent modelling shows $6.8B (2009) total.",
-      sources: [
-        { label: "CMAJ", url: "https://www.cmaj.ca/content/163/11/1435" },
-        { label: "Janssen 2012", url: "https://www150.statcan.gc.ca/n1/pub/82-003-x/2012001/article/11606-eng.htm" },
-        { label: "CPRA/CFLRI Summary", url: "https://lin.ca/resources/the-price-of-inactivity/" }
-      ]
-    },
-    {
-      quote: "After-school and evening recreation programs are linked with lower delinquency and better behaviour when they are structured and well-staffed.",
-      sources: [
-        { label: "Kremer et al. 2014", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4212416/" },
-        { label: "Gottfredson et al. 2004", url: "https://www.ncjrs.gov/pdffiles1/nij/grants/206013.pdf" }
-      ]
-    },
-    {
-      quote: "Greening and remediating neighbourhood spaces is associated with reduced violent crime and better mental health—supporting investments in safe, maintained recreation environments.",
-      sources: [
-        { label: "Branas et al. 2018 (PNAS)", url: "https://joeornstein.github.io/publications/VacantLotsPhilly.pdf" },
-        { label: "JAMA Network Open", url: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2687277" },
-        { label: "JAMA Internal Medicine", url: "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2654699" }
-      ]
-    }
-  ];
-
   const benefitCategories = [
     {
       title: "Evidence-Based Physical Activity Promotion",
@@ -500,40 +453,6 @@ export default function CommunityBenefits() {
           </div>
         </section>
       ))}
-
-      {/* Ready-to-Cite Proof Points */}
-      <section className="py-20 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-4">Ready-to-Cite Proof Points</h2>
-          <p className="text-center text-slate-600 mb-12 max-w-3xl mx-auto">
-            Quotable evidence statements with direct links to peer-reviewed sources. Perfect for grant applications,
-            presentations, and community outreach materials.
-          </p>
-          <div className="space-y-6">
-            {proofPoints.map((point, i) => (
-              <Card key={i} className="border-l-4 border-emerald-500">
-                <CardContent className="p-6">
-                  <p className="text-lg text-slate-800 leading-relaxed mb-4 italic">"{point.quote}"</p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="text-sm text-slate-600 font-semibold mr-2">Sources:</span>
-                    {point.sources.map((source, j) => (
-                      <a
-                        key={j}
-                        href={source.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full hover:bg-emerald-200 transition-colors font-medium"
-                      >
-                        {source.label} <ExternalLink className="w-3 h-3" />
-                      </a>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Research Sources */}
       <section className="py-16 bg-white">
