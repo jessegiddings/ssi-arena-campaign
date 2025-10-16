@@ -309,19 +309,19 @@ export default function CommunityBenefits() {
           </p>
 
           {/* Canadian Context Alert */}
-          <div className="grid md:grid-cols-2 gap-4 mt-8">
-            <Card className="border-l-4 border-sky-600 bg-sky-50">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-3">
-                  <AlertCircle className="w-6 h-6 text-sky-600 mt-1 flex-shrink-0" />
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            <Card className="border-l-4 border-sky-600 bg-sky-50 hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="pt-8 px-8 pb-8">
+                <div className="flex items-start gap-4">
+                  <AlertCircle className="w-7 h-7 text-sky-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-bold text-slate-900 mb-1">Canadian Youth Activity Gap</p>
-                    <p className="text-sm text-slate-700">Only <span className="font-bold text-sky-700">39%</span> of Canadian children meet daily activity targets</p>
+                    <p className="font-bold text-slate-900 mb-2 text-base">Canadian Youth Activity Gap</p>
+                    <p className="text-sm text-slate-700 leading-relaxed">Only <span className="font-bold text-sky-700">39%</span> of Canadian children meet daily activity targets</p>
                     <a
                       href="https://www.participaction.com/en-ca/benefits-and-guidelines/children-and-youth"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-sky-600 hover:text-sky-700 flex items-center gap-1 mt-2"
+                      className="text-xs text-sky-600 hover:text-sky-700 flex items-center gap-1 mt-3 font-medium"
                     >
                       ParticipACTION 2024 <ExternalLink className="w-3 h-3" />
                     </a>
@@ -330,18 +330,18 @@ export default function CommunityBenefits() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-emerald-600 bg-emerald-50">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-3">
-                  <TrendingUp className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
+            <Card className="border-l-4 border-emerald-600 bg-emerald-50 hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="pt-8 px-8 pb-8">
+                <div className="flex items-start gap-4">
+                  <TrendingUp className="w-7 h-7 text-emerald-600 mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-bold text-slate-900 mb-1">Healthcare Spending Pressure</p>
-                    <p className="text-sm text-slate-700">Canada's health spending: <span className="font-bold text-emerald-700">$372B</span> in 2024 (+5.7% growth). Prevention matters.</p>
+                    <p className="font-bold text-slate-900 mb-2 text-base">Healthcare Spending Pressure</p>
+                    <p className="text-sm text-slate-700 leading-relaxed">Canada's health spending: <span className="font-bold text-emerald-700">$372B</span> in 2024 (+5.7% growth). Prevention matters.</p>
                     <a
                       href="https://www.cihi.ca/en/national-health-expenditure-trends-2024-snapshot"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-emerald-600 hover:text-emerald-700 flex items-center gap-1 mt-2"
+                      className="text-xs text-emerald-600 hover:text-emerald-700 flex items-center gap-1 mt-3 font-medium"
                     >
                       CIHI 2024 <ExternalLink className="w-3 h-3" />
                     </a>
@@ -354,13 +354,13 @@ export default function CommunityBenefits() {
       </section>
 
       {/* Executive Takeaways */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="space-y-4">
+          <div className="space-y-5">
             {executiveTakeaways.map((takeaway, i) => (
-              <Card key={i} className="border-l-4 border-sky-500">
-                <CardContent className="p-8">
-                  <p className="text-slate-800 leading-relaxed mb-3">{takeaway.text}</p>
+              <Card key={i} className="border-l-4 border-sky-500 hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="pt-8 px-10 pb-8">
+                  <p className="text-slate-800 leading-relaxed mb-4 text-base">{takeaway.text}</p>
                   <div className="flex flex-wrap gap-2">
                     {takeaway.sources.map((source, j) => (
                       <a
@@ -368,7 +368,7 @@ export default function CommunityBenefits() {
                         href={source.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs bg-sky-100 text-sky-700 px-3 py-1 rounded-full hover:bg-sky-200 transition-colors"
+                        className="inline-flex items-center gap-1 text-xs bg-sky-100 text-sky-700 px-3 py-1.5 rounded-full hover:bg-sky-200 transition-colors font-medium"
                       >
                         {source.label} <ExternalLink className="w-3 h-3" />
                       </a>
@@ -382,19 +382,19 @@ export default function CommunityBenefits() {
       </section>
 
       {/* Key Statistics */}
-      <section className="py-12 bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-8">By the Numbers</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">By the Numbers</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {keyStatistics.map((stat, i) => (
-              <Card key={i} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 pb-6">
-                  <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500/10 to-blue-600/10 flex items-center justify-center mb-3 text-sky-600">
+              <Card key={i} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="pt-8 px-6 pb-8">
+                  <div className="mx-auto w-14 h-14 rounded-xl bg-gradient-to-br from-sky-500/10 to-blue-600/10 flex items-center justify-center mb-4 text-sky-600">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold text-sky-600 mb-2">{stat.number}</div>
-                  <p className="text-sm text-slate-700 mb-2 font-medium">{stat.label}</p>
-                  <p className="text-xs text-slate-500">{stat.source}</p>
+                  <div className="text-4xl font-bold text-sky-600 mb-3">{stat.number}</div>
+                  <p className="text-sm text-slate-700 mb-2 font-semibold leading-snug">{stat.label}</p>
+                  <p className="text-xs text-slate-500 mt-3">{stat.source}</p>
                 </CardContent>
               </Card>
             ))}
@@ -415,32 +415,32 @@ export default function CommunityBenefits() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {category.benefits.map((benefit, i) => (
-                <Card key={i} className="hover:shadow-xl transition-shadow duration-300">
-                  <CardContent className="p-10">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 flex items-center justify-center text-slate-700 flex-shrink-0`}>
+                <Card key={i} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4" style={{ borderTopColor: `transparent` }}>
+                  <CardContent className="pt-10 px-10 pb-10">
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 flex items-center justify-center text-slate-700 flex-shrink-0 shadow-sm`}>
                         {benefit.icon}
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-slate-900 mb-3">{benefit.title}</h3>
-                        <p className="text-slate-700 leading-relaxed mb-4">{benefit.description}</p>
-                        <div className="bg-sky-50 border-l-4 border-sky-500 p-3 rounded mb-3">
-                          <p className="text-sm font-semibold text-sky-900">{benefit.citation}</p>
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {benefit.sources.map((source, j) => (
-                            <a
-                              key={j}
-                              href={source.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded hover:bg-slate-200 transition-colors"
-                            >
-                              {source.label} <ExternalLink className="w-3 h-3" />
-                            </a>
-                          ))}
-                        </div>
+                        <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{benefit.title}</h3>
                       </div>
+                    </div>
+                    <p className="text-slate-700 leading-relaxed mb-5 text-base">{benefit.description}</p>
+                    <div className="bg-sky-50 border-l-4 border-sky-500 p-4 rounded mb-4">
+                      <p className="text-sm font-semibold text-sky-900 leading-relaxed">{benefit.citation}</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {benefit.sources.map((source, j) => (
+                        <a
+                          key={j}
+                          href={source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs bg-slate-100 text-slate-700 px-3 py-1.5 rounded-md hover:bg-slate-200 transition-colors font-medium"
+                        >
+                          {source.label} <ExternalLink className="w-3 h-3" />
+                        </a>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
@@ -451,23 +451,23 @@ export default function CommunityBenefits() {
       ))}
 
       {/* Research Sources */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-8">Comprehensive Research Sources</h2>
-          <Card>
-            <CardContent className="p-10">
-              <p className="text-slate-700 mb-6 leading-relaxed">
+          <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Research Sources</h2>
+          <Card className="shadow-lg">
+            <CardContent className="pt-10 px-12 pb-10">
+              <p className="text-slate-700 mb-8 leading-relaxed text-base">
                 This page synthesizes evidence from the highest-quality health research institutions and peer-reviewed
                 medical journals. All sources are publicly accessible and represent the current scientific consensus
                 on recreation facility benefits (2020–2025).
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                  <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-base">
                     <Shield className="w-5 h-5 text-sky-600" />
                     U.S. Federal Health Agencies
                   </h3>
-                  <ul className="space-y-2 text-sm text-slate-700">
+                  <ul className="space-y-3 text-sm text-slate-700">
                     <li className="flex items-start gap-2">
                       <span className="text-sky-600 mt-1">•</span>
                       <a href="https://www.thecommunityguide.org/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-600 flex items-center gap-1">
@@ -490,11 +490,11 @@ export default function CommunityBenefits() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                  <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-base">
                     <Building2 className="w-5 h-5 text-emerald-600" />
                     Canadian Health Research
                   </h3>
-                  <ul className="space-y-2 text-sm text-slate-700">
+                  <ul className="space-y-3 text-sm text-slate-700">
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-600 mt-1">•</span>
                       <a href="https://www.cmaj.ca/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 flex items-center gap-1">
@@ -523,11 +523,11 @@ export default function CommunityBenefits() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                  <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-base">
                     <Brain className="w-5 h-5 text-purple-600" />
                     Peer-Reviewed Medical Journals
                   </h3>
-                  <ul className="space-y-2 text-sm text-slate-700">
+                  <ul className="space-y-3 text-sm text-slate-700">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-600 mt-1">•</span>
                       <a href="https://www.bmj.com/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 flex items-center gap-1">
@@ -556,11 +556,11 @@ export default function CommunityBenefits() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                  <h3 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-base">
                     <FileText className="w-5 h-5 text-amber-600" />
                     Clinical Evidence Databases
                   </h3>
-                  <ul className="space-y-2 text-sm text-slate-700">
+                  <ul className="space-y-3 text-sm text-slate-700">
                     <li className="flex items-start gap-2">
                       <span className="text-amber-600 mt-1">•</span>
                       <a href="https://www.cochranelibrary.com/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-600 flex items-center gap-1">
@@ -580,9 +580,9 @@ export default function CommunityBenefits() {
                   </ul>
                 </div>
               </div>
-              <div className="mt-8 pt-6 border-t">
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  <strong>Evidence Quality:</strong> This page prioritizes systematic reviews, meta-analyses, and randomized controlled trials
+              <div className="mt-10 pt-8 border-t">
+                <p className="text-sm text-slate-600 leading-relaxed bg-slate-50 p-4 rounded-lg">
+                  <strong className="text-slate-900">Evidence Quality:</strong> This page prioritizes systematic reviews, meta-analyses, and randomized controlled trials
                   from Cochrane, JAMA, BMJ, and PNAS—the highest levels of scientific evidence. All Canadian statistics are from
                   Health Canada, CIHI, CMAJ, and ParticipACTION official reports (2020–2025).
                 </p>
