@@ -184,8 +184,8 @@ export default function Petition() {
       {/* Petition Form */}
       <section className="py-12 px-6">
         <div className="max-w-2xl mx-auto">
-          <Card className="shadow-xl">
-            <div className="bg-gradient-to-r from-sky-600 to-blue-700 p-8 text-white text-center">
+          <Card className="shadow-xl overflow-hidden">
+            <div className="bg-gradient-to-r from-sky-600 to-blue-700 p-8 text-white text-center rounded-t-xl">
               <Send className="w-12 h-12 mx-auto mb-4" />
               <h2 className="text-3xl font-bold mb-2">Sign the Petition</h2>
               <p className="text-sky-100">Add your support for the Salt Spring Island Arena</p>
@@ -304,8 +304,8 @@ export default function Petition() {
       {/* Pledge Section */}
       <section className="py-12 px-6">
         <div className="max-w-2xl mx-auto">
-          <Card className="shadow-xl">
-            <div className="bg-gradient-to-r from-emerald-600 to-green-700 p-8 text-white text-center">
+          <Card className="shadow-xl overflow-hidden">
+            <div className="bg-gradient-to-r from-emerald-600 to-green-700 p-8 text-white text-center rounded-t-xl">
               <DollarSign className="w-12 h-12 mx-auto mb-4" />
               <h2 className="text-3xl font-bold mb-2">Make a Pledge</h2>
               <p className="text-emerald-100">Help us demonstrate community capacity</p>
