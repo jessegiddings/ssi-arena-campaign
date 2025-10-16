@@ -359,7 +359,7 @@ export default function SSIArenaRedesigned() {
                 />
               </div>
               <div className="text-center bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl p-6">
-                <p className="text-2xl font-bold text-sky-700">Join {progressData.signatures}+ Island Supporters</p>
+                <p className="text-2xl font-bold text-sky-700">Join Island Supporters</p>
                 <p className="text-slate-600 mt-2">Community members backing this initiative</p>
               </div>
             </div>
@@ -582,8 +582,8 @@ export default function SSIArenaRedesigned() {
         <div className="max-w-5xl mx-auto px-8">
           <Card className="shadow-2xl overflow-hidden">
             <div className="bg-gradient-to-r from-sky-600 to-blue-700 p-8 text-white text-center">
-              <h2 className="text-3xl font-bold mb-3">Join {progressData.signatures}+ Island Supporters</h2>
-              <p className="text-sky-100">Add your voice to the petition</p>
+              <h2 className="text-3xl font-bold mb-3">Sign the Petition</h2>
+              <p className="text-sky-100">Add your voice to support the arena</p>
             </div>
 
             <CardContent className="pt-12 pb-8 px-10">
@@ -798,62 +798,14 @@ export default function SSIArenaRedesigned() {
         </div>
       </section>
 
-      {/* Campaign Progress Dashboard */}
+      {/* Project Timeline */}
       <section id="progress" className="py-20 bg-gradient-to-b from-sky-50 to-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <h2 className="text-4xl font-bold">Campaign Progress</h2>
-            <Button
-              onClick={async () => {
-                const stats = await getCampaignStats();
-                if (stats) {
-                  setProgressData({
-                    signatures: stats.signatures,
-                    signatureGoal: stats.signatureGoal,
-                    pledgeAmount: stats.pledgeAmount,
-                    pledgeGoal: stats.pledgeGoal,
-                    emails: stats.signatures,
-                    emailGoal: 1000
-                  });
-                }
-              }}
-              variant="outline"
-              size="sm"
-              className="text-sm"
-            >
-              Refresh Stats
-            </Button>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 mb-12 max-w-4xl mx-auto">
-            <Card className="overflow-hidden">
-              <CardContent className="p-10">
-                <ProgressMeter
-                  current={progressData.signatures}
-                  goal={progressData.signatureGoal}
-                  label="Community Signatures"
-                  icon={<Users className="w-6 h-6 text-sky-600" />}
-                />
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <CardContent className="p-10">
-                <ProgressMeter
-                  current={progressData.pledgeAmount}
-                  goal={progressData.pledgeGoal}
-                  label="Feasibility Study Funding"
-                  prefix="$"
-                  icon={<DollarSign className="w-6 h-6 text-sky-600" />}
-                />
-              </CardContent>
-            </Card>
-          </div>
+          <h2 className="text-4xl font-bold text-center mb-12">Project Timeline</h2>
 
           {/* Timeline */}
           <Card className="overflow-hidden">
             <CardContent className="p-10">
-              <h3 className="text-2xl font-bold mb-6 text-center">Project Timeline</h3>
               <div className="relative">
                 <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-sky-200"></div>
                 <div className="space-y-8">
