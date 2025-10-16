@@ -41,9 +41,6 @@ const PLEDGE_TIERS = [
   { label: "Major", value: 25000, description: "Visionary" },
 ];
 
-// Baseline signature count (offline signatures collected before website launch)
-const BASELINE_SIGNATURE_OFFSET = 400;
-
 // Default progress data (fallback if Supabase is not configured)
 const DEFAULT_PROGRESS_DATA = {
   pledgeAmount: 34750,
@@ -127,11 +124,11 @@ export default function SSIArenaRedesigned() {
         const stats = await getCampaignStats();
         if (stats) {
           const newProgressData = {
-            signatures: stats.signatures + BASELINE_SIGNATURE_OFFSET,
+            signatures: stats.signatures,
             signatureGoal: stats.signatureGoal,
             pledgeAmount: stats.pledgeAmount,
             pledgeGoal: stats.pledgeGoal,
-            emails: stats.signatures + BASELINE_SIGNATURE_OFFSET, // Using signatures as email count for now
+            emails: stats.signatures, // Using signatures as email count for now
             emailGoal: 1000
           };
           setProgressData(newProgressData);
@@ -150,11 +147,11 @@ export default function SSIArenaRedesigned() {
     // Set up real-time subscription
     const unsubscribe = subscribeToStats((stats) => {
       const newProgressData = {
-        signatures: stats.signatures + BASELINE_SIGNATURE_OFFSET,
+        signatures: stats.signatures,
         signatureGoal: stats.signatureGoal,
         pledgeAmount: stats.pledgeAmount,
         pledgeGoal: stats.pledgeGoal,
-        emails: stats.signatures + BASELINE_SIGNATURE_OFFSET, // Using signatures as email count
+        emails: stats.signatures, // Using signatures as email count
         emailGoal: 1000
       };
       setProgressData(newProgressData);
@@ -811,11 +808,11 @@ export default function SSIArenaRedesigned() {
                 const stats = await getCampaignStats();
                 if (stats) {
                   setProgressData({
-                    signatures: stats.signatures + BASELINE_SIGNATURE_OFFSET,
+                    signatures: stats.signatures,
                     signatureGoal: stats.signatureGoal,
                     pledgeAmount: stats.pledgeAmount,
                     pledgeGoal: stats.pledgeGoal,
-                    emails: stats.signatures + BASELINE_SIGNATURE_OFFSET,
+                    emails: stats.signatures,
                     emailGoal: 1000
                   });
                 }
