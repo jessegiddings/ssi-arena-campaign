@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import SEO, { pageSEO } from "./components/SEO";
 
 const PLEDGE_TIERS = [
   { label: "$25", value: 25, description: "Supporter" },
@@ -135,6 +136,7 @@ export default function Petition() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <SEO {...pageSEO.petition} />
       {/* Simple Header */}
       <header className="bg-white border-b shadow-sm">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">

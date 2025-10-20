@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import SEO, { pageSEO } from "./components/SEO";
 
 // Photo placeholder component
 function PhotoPlaceholder({ label, aspectRatio = "16/9", overlay = false }) {
@@ -263,6 +264,7 @@ export default function SSIArenaRedesigned() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO {...pageSEO.home} />
       {/* Header Navigation */}
       <header className="sticky top-0 z-30 backdrop-blur-md bg-white/80 border-b shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO, { pageSEO } from "./components/SEO";
 import {
   Heart,
   TrendingUp,
@@ -269,6 +270,7 @@ export default function CommunityBenefits() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO {...pageSEO.benefits} />
       {/* Header Navigation */}
       <header className="sticky top-0 z-30 backdrop-blur-md bg-white/80 border-b shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
