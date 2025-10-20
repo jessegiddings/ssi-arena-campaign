@@ -10,6 +10,8 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import SEO, { pageSEO } from "./components/SEO";
+import SocialShare from "./components/SocialShare";
+import ThankYouModal from "./components/ThankYouModal";
 
 // Photo placeholder component
 function PhotoPlaceholder({ label, aspectRatio = "16/9", overlay = false }) {
@@ -117,6 +119,8 @@ export default function SSIArenaRedesigned() {
   const [error, setError] = useState("");
   const [progressData, setProgressData] = useState(DEFAULT_PROGRESS_DATA);
   const [loadingStats, setLoadingStats] = useState(true);
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [thankYouData, setThankYouData] = useState({});
 
   // Load campaign stats on component mount and set up real-time updates
   useEffect(() => {
@@ -195,6 +199,15 @@ export default function SSIArenaRedesigned() {
       }
 
       setSubmitted('signature');
+
+      // Show thank you modal
+      setThankYouData({
+        type: 'signature',
+        signatureNumber: progressData.signatures + 1,
+        supporterName: `${form.firstName} ${form.lastName}`
+      });
+      setShowThankYou(true);
+
     } catch (err) {
       console.error("Submission error:", err);
       setError(err.message || "Something went wrong. Please try again.");
@@ -243,6 +256,15 @@ export default function SSIArenaRedesigned() {
       }
 
       setSubmitted('pledge');
+
+      // Show thank you modal
+      setThankYouData({
+        type: 'pledge',
+        pledgeAmount: form.pledge,
+        supporterName: `${form.firstName} ${form.lastName || ''}`
+      });
+      setShowThankYou(true);
+
       // Clear the form
       setForm({
         firstName: '',
@@ -349,6 +371,16 @@ export default function SSIArenaRedesigned() {
                 >
                   <Building2 className="w-5 h-5 mr-2" /> View the Design
                 </Button>
+              </div>
+
+              {/* Social Sharing */}
+              <div className="mt-8 pt-8 border-t border-slate-200">
+                <SocialShare
+                  url="https://ssiarena.com/"
+                  title="Support Salt Spring Island's Community Arena"
+                  description="Join the movement to build a world-class community arena on Salt Spring Island. Sign the petition and help create a facility for all ages and abilities!"
+                  hashtags="SSIArena,SaltSpringIsland,CommunityArena"
+                />
               </div>
             </div>
 
@@ -868,8 +900,10 @@ export default function SSIArenaRedesigned() {
                 <li><button onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Vision</button></li>
                 <li><button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Features</button></li>
                 <li><Link to="/community-benefits" className="hover:text-white transition-colors">Community Benefits</Link></li>
+                <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
                 <li><button onClick={() => document.getElementById('progress')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Progress</button></li>
                 <li><button onClick={() => document.getElementById('sign')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Sign Petition</button></li>
+                <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               </ul>
             </div>
             <div>
@@ -892,6 +926,16 @@ export default function SSIArenaRedesigned() {
           </div>
         </div>
       </footer>
+
+      {/* Thank You Modal */}
+      <ThankYouModal
+        isOpen={showThankYou}
+        onClose={() => setShowThankYou(false)}
+        type={thankYouData.type}
+        pledgeAmount={thankYouData.pledgeAmount}
+        signatureNumber={thankYouData.signatureNumber}
+        supporterName={thankYouData.supporterName}
+      />
     </div>
   );
 }

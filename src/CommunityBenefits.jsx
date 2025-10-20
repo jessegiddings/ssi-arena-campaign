@@ -645,6 +645,8 @@ export default function CommunityBenefits() {
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/community-benefits" className="hover:text-white transition-colors">Community Benefits</Link></li>
                 <li><Link to="/petition" className="hover:text-white transition-colors">Sign Petition</Link></li>
+                <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
+                <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               </ul>
             </div>
             <div>

@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import SEO, { pageSEO } from "./components/SEO";
+import ThankYouModal from "./components/ThankYouModal";
 
 const PLEDGE_TIERS = [
   { label: "$25", value: 25, description: "Supporter" },
@@ -37,6 +38,8 @@ export default function Petition() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [thankYouData, setThankYouData] = useState({});
 
   const handleSubmit = async () => {
     setError("");
@@ -67,6 +70,14 @@ export default function Petition() {
       }
 
       setSubmitted('signature');
+
+      // Show thank you modal
+      setThankYouData({
+        type: 'signature',
+        supporterName: `${form.firstName} ${form.lastName}`
+      });
+      setShowThankYou(true);
+
     } catch (err) {
       console.error("Submission error:", err);
       setError(err.message || "Something went wrong. Please try again.");
@@ -115,6 +126,15 @@ export default function Petition() {
       }
 
       setSubmitted('pledge');
+
+      // Show thank you modal
+      setThankYouData({
+        type: 'pledge',
+        pledgeAmount: form.pledge,
+        supporterName: `${form.firstName} ${form.lastName || ''}`
+      });
+      setShowThankYou(true);
+
       // Clear the form
       setForm({
         firstName: '',
@@ -438,13 +458,31 @@ export default function Petition() {
           <p className="text-slate-500 text-xs">
             saltspringislandarena@gmail.com • Registered Non-Profit Society
           </p>
-          <div className="mt-4">
-            <Link to="/" className="text-sky-400 hover:text-sky-300 text-sm font-medium">
-              Learn More About the Project →
+          <div className="mt-4 flex flex-wrap gap-4 justify-center text-sm">
+            <Link to="/" className="text-sky-400 hover:text-sky-300 font-medium">
+              Home
+            </Link>
+            <Link to="/community-benefits" className="text-sky-400 hover:text-sky-300 font-medium">
+              Community Benefits
+            </Link>
+            <Link to="/faq" className="text-sky-400 hover:text-sky-300 font-medium">
+              FAQ
+            </Link>
+            <Link to="/privacy" className="text-sky-400 hover:text-sky-300 font-medium">
+              Privacy Policy
             </Link>
           </div>
         </div>
       </footer>
+
+      {/* Thank You Modal */}
+      <ThankYouModal
+        isOpen={showThankYou}
+        onClose={() => setShowThankYou(false)}
+        type={thankYouData.type}
+        pledgeAmount={thankYouData.pledgeAmount}
+        supporterName={thankYouData.supporterName}
+      />
     </div>
   );
 }
