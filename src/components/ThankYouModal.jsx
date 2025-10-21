@@ -42,7 +42,7 @@ I just signed a petition for a community arena on Salt Spring Island and I'm hop
 
 This is a once-in-a-generation opportunity to bring a world-class recreation facility to our island - NHL rink, fitness center, walking track, and community gathering space.
 
-We need 2,000 signatures to show government funders that the community is behind this. Currently at ${signatureNumber || 400}+ signatures.
+We need 2,000 signatures to show government funders that the community is behind this.
 
 Can you take 30 seconds to sign?
 ${petitionUrl}
@@ -126,11 +126,9 @@ Thank you!`,
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
               Thank You for Signing!
             </h2>
-            {signatureNumber && (
-              <p className="text-lg font-semibold text-sky-600 mb-3">
-                You're supporter #{signatureNumber}
-              </p>
-            )}
+            <p className="text-lg font-semibold text-sky-600 mb-3">
+              You're now part of the movement
+            </p>
           </div>
 
           {/* URGENT PLEA */}
@@ -143,7 +141,6 @@ Thank you!`,
                 </h3>
                 <p className="text-slate-800 font-medium mb-2">
                   We need <strong>2,000 signatures</strong> to convince the government to fund this project.
-                  We're at <strong>{signatureNumber || 400}+</strong> signatures.
                 </p>
                 <p className="text-slate-700 text-sm">
                   <strong className="text-orange-700">Please - share this petition with everyone you know on Salt Spring Island.</strong> Text it to your neighbors.
@@ -252,25 +249,17 @@ Thank you!`,
             />
           </div>
 
-          {/* Stats */}
-          {signatureNumber && (
-            <div className="bg-gradient-to-r from-sky-50 to-blue-50 rounded-lg p-4 mb-6">
-              <div className="text-center">
-                <p className="text-sm text-slate-700 mb-1">
-                  <strong>{signatureNumber}</strong> islanders have signed
-                </p>
-                <p className="text-xs text-slate-600">
-                  Only <strong>{2000 - signatureNumber}</strong> more signatures needed to reach our goal!
-                </p>
-                <div className="w-full bg-slate-200 rounded-full h-2 mt-3">
-                  <div
-                    className="bg-gradient-to-r from-sky-500 to-blue-600 h-2 rounded-full transition-all duration-1000"
-                    style={{ width: `${Math.min((signatureNumber / 2000) * 100, 100)}%` }}
-                  />
-                </div>
-              </div>
+          {/* Goal Info - no specific numbers until we have real data */}
+          <div className="bg-gradient-to-r from-sky-50 to-blue-50 rounded-lg p-4 mb-6">
+            <div className="text-center">
+              <p className="text-sm text-slate-700 font-medium mb-1">
+                Our Goal: <strong>2,000 Signatures</strong>
+              </p>
+              <p className="text-xs text-slate-600">
+                Every signature brings us closer to making this happen!
+              </p>
             </div>
-          )}
+          </div>
 
           {/* Next Steps */}
           <div className="space-y-3">
