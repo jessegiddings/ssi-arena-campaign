@@ -21,8 +21,7 @@ This guide will help you set up automated email notifications for your Salt Spri
 3. **Get your API key**
    - Go to [resend.com/api-keys](https://resend.com/api-keys)
    - Create a new API key
-   - Copy it for later use
-re_3867Z6gW_N5trfcUK8F7SYb681Y4Po1Ln
+   - Copy it for later use (keep it secret!)
 
 ## Step 2: Update Environment Variables
 
