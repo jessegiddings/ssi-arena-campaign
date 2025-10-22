@@ -901,14 +901,23 @@ export default function SSIArenaRedesigned() {
           </Card>
         </div>
 
-        {/* Organization Logo */}
+        {/* Organization Logos */}
         <div className="mt-16 text-center">
-          <div className="max-w-md mx-auto">
-            <img
-              src="/ssicaalogo.png"
-              alt="Salt Spring Island Community Arena Association Logo"
-              className="w-full h-auto"
-            />
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
+            <div>
+              <img
+                src="/ssicaalogo.png"
+                alt="Salt Spring Island Community Arena Association Logo"
+                className="w-full h-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="/IMG_2908.png"
+                alt="Salt Spring Island Healthy Living Society Logo"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
