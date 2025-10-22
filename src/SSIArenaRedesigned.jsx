@@ -392,19 +392,49 @@ export default function SSIArenaRedesigned() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="text-center bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl p-6">
-                <p className="text-2xl font-bold text-sky-700">Join Island Supporters</p>
-                <p className="text-slate-600 mt-2">Community members backing this initiative</p>
-              </div>
             </div>
           </div>
 
           {/* Goal Statement */}
           <div className="max-w-4xl mx-auto px-6 mt-8 text-center">
             <p className="text-sm text-slate-500">
-              <strong>Goal:</strong> We need 2,000 signatures • $5M in community pledges toward a $13–15M project
+              <strong>Goal:</strong> We need 2,000 signatures • $5M in community pledges toward a $18–22M project
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Luc Robitaille Testimonial Section */}
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <Card className="shadow-xl border-2 border-amber-200 bg-gradient-to-br from-white to-amber-50/30">
+            <CardContent className="p-8 md:p-12">
+              <div className="flex items-start gap-4 mb-6">
+                <Trophy className="w-10 h-10 text-amber-500 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-sm font-semibold text-amber-700 uppercase tracking-wide">NHL Hall of Famer Support</h3>
+                  <p className="text-xs text-slate-600 mt-1">President, Los Angeles Kings</p>
+                </div>
+              </div>
+
+              <blockquote className="text-lg md:text-xl text-slate-700 leading-relaxed mb-6 italic">
+                "Growing up, I know how much having access to an arena shaped my life — not just as a hockey player, but as a person. A rink is more than ice; it's a place where kids learn teamwork, families connect, and communities come together. That's why I'm proud to support the Salt Spring Island Community Arena project. This rink will create opportunities and memories for generations to come.
+                <br /><br />
+                Salt Spring's rink has my support. Your move, Vancouver Canucks — don't let an L.A. Kings guy beat you to cheering for minor hockey in B.C."
+              </blockquote>
+
+              <div className="flex items-center gap-4 pt-6 border-t border-amber-200">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  LR
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">Luc Robitaille</p>
+                  <p className="text-sm text-slate-600">President, Los Angeles Kings</p>
+                  <p className="text-sm text-slate-600">NHL Hockey Hall of Famer</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
