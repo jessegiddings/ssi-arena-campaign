@@ -84,6 +84,10 @@ export default function FAQ() {
         {
           question: "How can I get involved?",
           answer: "There are many ways to help: Sign the community petition to show your support. Submit a Letter of Intent to donate (no money collected until CRD approval). Share our story and encourage others to join the effort. Every show of support strengthens our case for government and foundation funding."
+        },
+        {
+          question: "If we're building an arena… why not bring a Junior A team to Salt Spring Island?",
+          answer: "That's a great question — and honestly, we were thinking the exact same thing. If Gibsons, BC can fill 750 seats every week with a Junior A team — and they've got a population of around 6,000 people — then surely Salt Spring Island, with over 15,000 residents, can do the same or better. We've already been in early conversations with the Pacific Junior Hockey League (PJHL) about the possibility of a Salt Spring team in the future. While our focus right now is on getting the arena built and funded, we're laying the groundwork so that one day, fans here might be cheering for a home team of our own. So yes — you could say this idea is on ice… but in the best possible way. 🏒"
         }
       ]
     }
