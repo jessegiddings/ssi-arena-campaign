@@ -9,6 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import SEO, { pageSEO } from "./components/SEO";
+import SocialShare from "./components/SocialShare";
+import ThankYouModal from "./components/ThankYouModal";
 
 // Photo placeholder component
 function PhotoPlaceholder({ label, aspectRatio = "16/9", overlay = false }) {
@@ -116,6 +119,8 @@ export default function SSIArenaRedesigned() {
   const [error, setError] = useState("");
   const [progressData, setProgressData] = useState(DEFAULT_PROGRESS_DATA);
   const [loadingStats, setLoadingStats] = useState(true);
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [thankYouData, setThankYouData] = useState({});
 
   // Load campaign stats on component mount and set up real-time updates
   useEffect(() => {
@@ -194,6 +199,15 @@ export default function SSIArenaRedesigned() {
       }
 
       setSubmitted('signature');
+
+      // Show thank you modal
+      setThankYouData({
+        type: 'signature',
+        signatureNumber: progressData.signatures + 1,
+        supporterName: `${form.firstName} ${form.lastName}`
+      });
+      setShowThankYou(true);
+
     } catch (err) {
       console.error("Submission error:", err);
       setError(err.message || "Something went wrong. Please try again.");
@@ -242,6 +256,15 @@ export default function SSIArenaRedesigned() {
       }
 
       setSubmitted('pledge');
+
+      // Show thank you modal
+      setThankYouData({
+        type: 'pledge',
+        pledgeAmount: form.pledge,
+        supporterName: `${form.firstName} ${form.lastName || ''}`
+      });
+      setShowThankYou(true);
+
       // Clear the form
       setForm({
         firstName: '',
@@ -263,6 +286,7 @@ export default function SSIArenaRedesigned() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO {...pageSEO.home} />
       {/* Header Navigation */}
       <header className="sticky top-0 z-30 backdrop-blur-md bg-white/80 border-b shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -348,6 +372,16 @@ export default function SSIArenaRedesigned() {
                   <Building2 className="w-5 h-5 mr-2" /> View the Design
                 </Button>
               </div>
+
+              {/* Social Sharing */}
+              <div className="mt-8 pt-8 border-t border-slate-200">
+                <SocialShare
+                  url="https://ssiarena.com/"
+                  title="Support Salt Spring Island's Community Arena"
+                  description="Join the movement to build a world-class community arena on Salt Spring Island. Sign the petition and help create a facility for all ages and abilities!"
+                  hashtags="SSIArena,SaltSpringIsland,CommunityArena"
+                />
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -358,19 +392,50 @@ export default function SSIArenaRedesigned() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="text-center bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl p-6">
-                <p className="text-2xl font-bold text-sky-700">Join Island Supporters</p>
-                <p className="text-slate-600 mt-2">Community members backing this initiative</p>
-              </div>
             </div>
           </div>
 
           {/* Goal Statement */}
           <div className="max-w-4xl mx-auto px-6 mt-8 text-center">
             <p className="text-sm text-slate-500">
-              <strong>Goal:</strong> We need 2,000 signatures • $5M in community pledges toward a $13–15M project
+              <strong>Goal:</strong> We need 2,000 signatures • $5M in community pledges toward a $18–22M project
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Luc Robitaille Testimonial Section */}
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <Card className="shadow-xl border-2 border-amber-200 bg-gradient-to-br from-white to-amber-50/30">
+            <CardContent className="p-8 md:p-12">
+              <div className="flex items-start gap-4 mb-6">
+                <Trophy className="w-10 h-10 text-amber-500 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-sm font-semibold text-amber-700 uppercase tracking-wide">NHL Hall of Famer Support</h3>
+                  <p className="text-xs text-slate-600 mt-1">President, Los Angeles Kings</p>
+                </div>
+              </div>
+
+              <blockquote className="text-lg md:text-xl text-slate-700 leading-relaxed mb-6 italic">
+                "Growing up, I know how much having access to an arena shaped my life — not just as a hockey player, but as a person. A rink is more than ice; it's a place where kids learn teamwork, families connect, and communities come together. That's why I'm proud to support the Salt Spring Island Community Arena project. This rink will create opportunities and memories for generations to come.
+                <br /><br />
+                Salt Spring's rink has my support. Your move, Vancouver Canucks — don't let an L.A. Kings guy beat you to cheering for minor hockey in B.C."
+              </blockquote>
+
+              <div className="flex items-center gap-4 pt-6 border-t border-amber-200">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  LR
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">Luc Robitaille</p>
+                  <p className="text-sm text-slate-600">President, Los Angeles Kings</p>
+                  <p className="text-sm text-slate-600">NHL Hockey Hall of Famer</p>
+                  <p className="text-sm font-semibold text-amber-700 mt-1">Honorary Chair of Hockey Development for Salt Spring Island</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -866,8 +931,10 @@ export default function SSIArenaRedesigned() {
                 <li><button onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Vision</button></li>
                 <li><button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Features</button></li>
                 <li><Link to="/community-benefits" className="hover:text-white transition-colors">Community Benefits</Link></li>
+                <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
                 <li><button onClick={() => document.getElementById('progress')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Progress</button></li>
                 <li><button onClick={() => document.getElementById('sign')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Sign Petition</button></li>
+                <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               </ul>
             </div>
             <div>
@@ -890,6 +957,16 @@ export default function SSIArenaRedesigned() {
           </div>
         </div>
       </footer>
+
+      {/* Thank You Modal */}
+      <ThankYouModal
+        isOpen={showThankYou}
+        onClose={() => setShowThankYou(false)}
+        type={thankYouData.type}
+        pledgeAmount={thankYouData.pledgeAmount}
+        signatureNumber={thankYouData.signatureNumber}
+        supporterName={thankYouData.supporterName}
+      />
     </div>
   );
 }

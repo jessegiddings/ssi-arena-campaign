@@ -1,4 +1,5 @@
 import { supabase } from './supabase.js'
+import { trackPetitionSignature, trackPledgeCommitment, trackNewsletterSignup } from './tracking.js'
 
 // Submit a signature to the database
 export async function submitSignature(signatureData) {
@@ -19,6 +20,15 @@ export async function submitSignature(signatureData) {
       .single()
 
     if (error) throw error
+
+    // Track the conversion
+    trackPetitionSignature(signatureData)
+
+    // If they opted into updates, track newsletter signup
+    if (signatureData.consentUpdates) {
+      trackNewsletterSignup(signatureData)
+    }
+
     return { success: true, signatureId: data.id }
   } catch (error) {
     console.error('Error submitting signature:', error)
@@ -40,6 +50,10 @@ export async function submitPledge(signatureId, pledgeData) {
       ])
 
     if (error) throw error
+
+    // Track the pledge conversion
+    trackPledgeCommitment(pledgeData.amount)
+
     return { success: true }
   } catch (error) {
     console.error('Error submitting pledge:', error)
