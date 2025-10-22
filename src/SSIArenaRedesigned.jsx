@@ -627,7 +627,7 @@ export default function SSIArenaRedesigned() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <CardContent className="p-8">
+                <CardContent className="pt-10 px-8 pb-8">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
                       {feature.icon}
