@@ -12,104 +12,78 @@ export default function FAQ() {
 
   const faqs = [
     {
-      category: "Project Basics",
-      icon: <Building2 className="w-5 h-5" />,
-      questions: [
-        {
-          question: "How much will the arena cost?",
-          answer: "The estimated construction cost for the arena is approximately $15-20 million. This includes an NHL-sized ice rink, fitness center, walking track, multi-purpose space, and all necessary infrastructure. We're working on a detailed feasibility study that will provide more precise cost estimates. The project will be funded through a combination of government grants, community fundraising, and private donations."
-        },
-        {
-          question: "Where will the arena be located?",
-          answer: "The arena is proposed to be built at Rainbow Road as part of a larger recreation campus development. This central location was chosen for its accessibility to all islanders, existing infrastructure, and potential for integration with other community facilities. The exact site details are being finalized through community consultation and technical assessments."
-        },
-        {
-          question: "When will construction start?",
-          answer: "Our current timeline projects: Q4 2025 - Community engagement and signature gathering; Q1 2026 - Professional feasibility study; Q2 2026 - Grant applications to federal and provincial governments; Q2 2027 - Capital campaign and major donor engagement; Q1 2028 - Groundbreaking; 2029/2030 - Grand opening. This timeline may adjust based on funding approvals and community support."
-        },
-        {
-          question: "Who is behind this campaign?",
-          answer: "The campaign is led by the Salt Spring Island Community Arena Association, a registered non-profit society in British Columbia. Our board includes long-time island residents, parents, business owners, and recreation advocates. The project has been designed by Hemsworth Architects, inspired by successful community arenas like the Upper Skeena Recreation Centre."
-        }
-      ]
-    },
-    {
-      category: "Funding & Financial",
+      category: "Funding & Taxes",
       icon: <DollarSign className="w-5 h-5" />,
       questions: [
         {
-          question: "Will my taxes increase?",
-          answer: "We are pursuing a funding model that minimizes taxpayer burden. The majority of funding will come from federal and provincial recreation infrastructure grants, private donations, and fundraising. Any local government contribution would likely be subject to a referendum. Our goal is to secure 70-80% of funding through senior government grants before requesting local taxpayer support."
+          question: "Will this raise our property taxes?",
+          answer: "No. The Salt Spring Island Healthy Living Society has made a clear commitment: this project will not raise local taxes. It will be funded entirely through donations, corporate partnerships, and federal and provincial infrastructure programs. We're also planning to establish a $10 million community endowment to cover any operating shortfall for at least the first decade — ensuring the facility is financially sustainable and not a burden on taxpayers."
         },
         {
-          question: "What happens to my pledge if the project doesn't proceed?",
-          answer: "All pledges are conditional commitments, not immediate payments. Pledge collection will only begin once we've secured sufficient government funding and confirmed the project is proceeding. If the project does not move forward, your pledge will not be collected and you will have no financial obligation. We will communicate clearly at every stage of the campaign."
+          question: "Who's behind the funding plan?",
+          answer: "We're proud to be working with Tom Berekoff, one of British Columbia's leading philanthropic consultants, who helped raise nearly $20 million for the Upper Skeena Recreation Centre in Hazelton, BC — a community much like ours. With his experience and guidance, we're confident Salt Spring can achieve the same success."
         },
         {
-          question: "Can I get a tax receipt for my donation?",
-          answer: "Currently, we are working toward charitable status that would allow us to issue tax receipts for donations. In the meantime, pledges and contributions are being recorded. We will update supporters once charitable status is confirmed. Business contributions may be eligible for different tax treatment - consult your accountant."
+          question: "What is the total cost of the project?",
+          answer: "The projected cost is between $18–22 million, depending on the final design, materials, and amenities. That includes the single-sheet ice rink, indoor walking track, fitness mezzanine, community wellness space, and energy-efficient building systems designed for longevity and low environmental impact."
         },
         {
-          question: "How will the arena be financially sustainable?",
-          answer: "The arena will generate revenue through ice rentals, fitness memberships, program fees, facility rentals for events, and concession sales. Similar-sized community arenas in BC typically achieve 60-80% cost recovery through user fees. We're designing the facility to be multi-purpose and year-round to maximize utilization and revenue. A detailed business plan is part of our feasibility study."
+          question: "How will the arena's annual operations be funded?",
+          answer: "Through a combination of endowment income, user programming, and partnerships. We plan to raise a $10 million operating endowment to offset annual costs. We're also in early discussions with organizations like the LA Kings and Vancouver Canucks to explore support for youth hockey and community programs — initiatives that could help keep local participation fees low and accessible."
+        },
+        {
+          question: "What happens if you don't reach your fundraising goal?",
+          answer: "We will not break ground until full funding is secured. This is a responsible, community-led project — we will only proceed once construction and operational sustainability are fully guaranteed."
         }
       ]
     },
     {
-      category: "Usage & Programs",
+      category: "Governance & Sustainability",
+      icon: <Shield className="w-5 h-5" />,
+      questions: [
+        {
+          question: "Who will own and operate the facility?",
+          answer: "The facility will be owned and operated by the Salt Spring Island Healthy Living Society, a registered non-profit organization established specifically for this purpose. We'll work in partnership with the Capital Regional District (CRD) to ensure transparency, oversight, and long-term accountability."
+        },
+        {
+          question: "What if operating costs increase in the future?",
+          answer: "Our endowment fund will be structured to grow over time, with conservative investment strategies and a long-term horizon. We'll also pursue ongoing partnerships and grants to offset future operating costs, ensuring the facility remains financially sound and community-accessible for generations."
+        }
+      ]
+    },
+    {
+      category: "Community Impact & Benefits",
       icon: <Users className="w-5 h-5" />,
       questions: [
         {
-          question: "Will there be public skating times?",
-          answer: "Absolutely! Public skating will be a core program offering. We envision family skates, adult-only sessions, parent-and-tot times, and special events like holiday skating parties. The schedule will balance organized sports (hockey, figure skating, curling) with public access times. Community input will shape the programming schedule."
+          question: "Why does Salt Spring need this?",
+          answer: "Despite being home to over 15,000 residents, Salt Spring Island has no indoor recreation centre, no rink, and no year-round community gathering space. Families currently travel off-island for hockey, skating, and indoor sports. This project will finally provide a safe, inclusive space for children, youth, seniors, and families — promoting health, connection, and year-round activity for everyone."
         },
         {
-          question: "What programs will be offered?",
-          answer: "The arena will host: Ice sports - hockey leagues, figure skating, public skating, learn-to-skate, curling; Fitness - gym with cardio and weights, group fitness classes, personal training; Youth programs - after-school programs, summer camps, drop-in recreation; Seniors - walking track, gentle fitness, social programs; Summer activities - box lacrosse, ball hockey, roller sports; Community events - concerts, trade shows, farmers markets, gatherings for up to 1,500-3,000 people."
+          question: "Will it be environmentally responsible?",
+          answer: "Absolutely. Sustainability is one of our core principles. The facility will be solar-ready, heat-recovery equipped, and designed to meet or exceed BC Step Code 4 energy standards. Our goal is to make it one of the most efficient community recreation facilities in Canada — lowering both emissions and long-term energy costs."
         },
         {
-          question: "How can I help beyond signing the petition?",
-          answer: "There are many ways to support the campaign: 1) Make a financial pledge, 2) Volunteer for outreach and canvassing, 3) Share the campaign on social media, 4) Attend community meetings and events, 5) Connect us with potential major donors, 6) Offer professional services (legal, accounting, marketing, etc.), 7) Join our mailing list to stay informed and engaged. Every contribution, big or small, makes a difference!"
+          question: "How will the community be able to use it?",
+          answer: "The space will serve far more than hockey. There will be public skating, youth and senior programs, fitness and wellness classes, and a year-round indoor walking track — all designed to be affordable and accessible. It's not just a rink; it's a healthy living hub for the entire island."
+        },
+        {
+          question: "Will this create local jobs?",
+          answer: "Yes. The project will generate dozens of local construction jobs during the build and ongoing positions in management, maintenance, and programming once operational — creating year-round employment opportunities right here on Salt Spring."
         }
       ]
     },
     {
-      category: "Environmental & Community",
-      icon: <Leaf className="w-5 h-5" />,
+      category: "Timeline & Getting Involved",
+      icon: <Calendar className="w-5 h-5" />,
       questions: [
         {
-          question: "What about environmental sustainability?",
-          answer: "Sustainability is a core design principle. The arena will feature: Energy-efficient refrigeration systems using natural refrigerants with lower global warming potential; LED lighting throughout; Solar panels on the roof to offset electricity use; Rainwater harvesting for ice resurfacing; High-performance building envelope to minimize heat loss; Consideration for future geothermal or heat pump systems; The design will target LEED Silver certification or equivalent BC Energy Step Code compliance."
+          question: "When will construction start?",
+          answer: "We're currently in the feasibility and design stage, working closely with the CRD and local partners. Construction will begin only once land use amendments, funding, and environmental approvals are complete — ensuring we move forward responsibly and debt-free."
         },
         {
-          question: "How will this benefit the whole community, not just hockey players?",
-          answer: "The arena is designed as a multi-generational, multi-use facility. Benefits include: Youth - Safe recreation, after-school programs, skill development; Seniors - Indoor walking track, gentle fitness, fall prevention programs; Families - Affordable recreation close to home, no travel to Victoria; Businesses - Event space, increased foot traffic, economic activity; Everyone - Community gathering space, emergency shelter capacity, improved quality of life. Research shows recreation centers reduce crime, improve mental health, and save healthcare costs."
-        },
-        {
-          question: "Is the arena association a registered non-profit?",
-          answer: "Yes, the Salt Spring Island Community Arena Association is a registered non-profit society in British Columbia. We operate transparently with volunteer board members and are accountable to our members and the community. Financial records and meeting minutes are available to members. We are working toward registered charity status for enhanced accountability and tax receipt eligibility."
-        },
-        {
-          question: "How will the arena impact traffic and parking?",
-          answer: "The Rainbow Road location is accessible by bus, bike, and car. We're planning adequate parking for peak times, with shared parking arrangements with adjacent facilities during off-peak hours. Traffic studies will be part of the development approval process. We'll work with the community to minimize impacts through smart scheduling and encouraging alternative transportation."
-        }
-      ]
-    },
-    {
-      category: "Getting Involved",
-      icon: <Lightbulb className="w-5 h-5" />,
-      questions: [
-        {
-          question: "I don't have kids or play hockey. Why should I support this?",
-          answer: "The arena benefits everyone on the island: Property values - Communities with recreation facilities have higher property values and attract families; Health care - Recreation centers reduce healthcare costs through preventive health programs; Safety - After-school and evening programs reduce youth crime and delinquency; Seniors - The walking track and fitness programs help prevent falls and support aging in place; Economy - The facility creates jobs, attracts visitors for tournaments, and keeps recreation spending local; Emergency preparedness - The arena can serve as an emergency shelter during disasters. It's an investment in our community's future."
-        },
-        {
-          question: "How can I stay updated on the campaign progress?",
-          answer: "Stay connected by: Signing up for our email newsletter (opt-in when you sign the petition); Following our social media accounts; Checking this website for regular updates; Attending community information sessions; Reading coverage in the Gulf Islands Driftwood and other local media. We're committed to transparent communication throughout this journey."
-        },
-        {
-          question: "Can businesses or organizations get involved?",
-          answer: "Absolutely! Business support is crucial. Options include: Financial pledges or sponsorships; In-kind contributions (services, materials, expertise); Naming rights opportunities for major contributors; Employee engagement and volunteer programs; Advocacy and promotion to your networks; Event sponsorships and partnerships. Business contributions may qualify for marketing and tax benefits. Contact us at saltspringislandarena@gmail.com to discuss partnership opportunities."
+          question: "How can I get involved?",
+          answer: "There are many ways to help: Sign the community petition to show your support. Submit a Letter of Intent to donate (no money collected until CRD approval). Share our story and encourage others to join the effort. Every show of support strengthens our case for government and foundation funding."
         }
       ]
     }
@@ -211,6 +185,16 @@ export default function FAQ() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Summary Section */}
+        <div className="mt-12 bg-gradient-to-br from-sky-50 to-blue-50 border-2 border-sky-200 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">In Summary</h2>
+          <p className="text-lg text-slate-700 leading-relaxed text-center max-w-3xl mx-auto">
+            The Salt Spring Island Healthy Living Society is building this project for the community, by the community — without adding tax burden, without cutting corners, and with full transparency at every step.
+            <br /><br />
+            This is about creating a healthier, more connected Salt Spring — a place our kids, families, and seniors can be proud of.
+          </p>
         </div>
 
         {/* Contact CTA */}
