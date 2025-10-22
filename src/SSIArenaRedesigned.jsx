@@ -431,6 +431,7 @@ export default function SSIArenaRedesigned() {
                   <p className="font-bold text-slate-900">Luc Robitaille</p>
                   <p className="text-sm text-slate-600">President, Los Angeles Kings</p>
                   <p className="text-sm text-slate-600">NHL Hockey Hall of Famer</p>
+                  <p className="text-sm font-semibold text-amber-700 mt-1">Honorary Chair of Hockey Development for Salt Spring Island</p>
                 </div>
               </div>
             </CardContent>
