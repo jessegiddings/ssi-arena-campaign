@@ -21,7 +21,7 @@ export default function FAQ() {
         },
         {
           question: "Who's behind the funding plan?",
-          answer: "We're proud to be working with Tom Berekoff, one of British Columbia's leading philanthropic consultants, who helped raise nearly $20 million for the Upper Skeena Recreation Centre in Hazelton, BC — a community much like ours. With his experience and guidance, we're confident Salt Spring can achieve the same success."
+          answer: "We're proud to be working with one of British Columbia's premier philanthropic consultants, who helped raise nearly $20 million for the Upper Skeena Recreation Centre in Hazelton, BC — a community much like ours. With their experience and guidance, we're confident Salt Spring can achieve the same success."
         },
         {
           question: "What is the total cost of the project?",
@@ -42,8 +42,8 @@ export default function FAQ() {
       icon: <Shield className="w-5 h-5" />,
       questions: [
         {
-          question: "Who will own and operate the facility?",
-          answer: "The facility will be owned and operated by the Salt Spring Island Healthy Living Society, a registered non-profit organization established specifically for this purpose. We'll work in partnership with the Capital Regional District (CRD) to ensure transparency, oversight, and long-term accountability."
+          question: "Who will operate the facility?",
+          answer: "The facility will be operated by the Salt Spring Island Healthy Living Society, a registered non-profit organization established specifically for this purpose, working in partnership with the Capital Regional District (CRD) to ensure transparency, oversight, and long-term accountability."
         },
         {
           question: "What if operating costs increase in the future?",
