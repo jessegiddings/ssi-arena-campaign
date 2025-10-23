@@ -309,6 +309,7 @@ export default function SSIArenaRedesigned() {
             <button onClick={() => document.getElementById('progress')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Progress</button>
             <button onClick={() => document.getElementById('sign')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Sign & Pledge</button>
             <Link to="/community-benefits" className="hover:text-sky-600 transition-colors">Community Benefits</Link>
+            <Link to="/faq" className="hover:text-sky-600 transition-colors">FAQ</Link>
           </nav>
         </div>
       </header>
@@ -409,14 +410,6 @@ export default function SSIArenaRedesigned() {
         <div className="max-w-5xl mx-auto px-6">
           <Card className="shadow-xl border-2 border-amber-200 bg-gradient-to-br from-white to-amber-50/30">
             <CardContent className="p-8 md:p-12">
-              <div className="flex items-start gap-4 mb-6">
-                <Trophy className="w-10 h-10 text-amber-500 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-sm font-semibold text-amber-700 uppercase tracking-wide">NHL Hall of Famer Support</h3>
-                  <p className="text-xs text-slate-600 mt-1">President, Los Angeles Kings</p>
-                </div>
-              </div>
-
               <blockquote className="text-lg md:text-xl text-slate-700 leading-relaxed mb-6 italic">
                 "Growing up, I know how much having access to an arena shaped my life — not just as a hockey player, but as a person. A rink is more than ice; it's a place where kids learn teamwork, families connect, and communities come together. That's why I'm proud to support the Salt Spring Island Community Arena project. This rink will create opportunities and memories for generations to come.
                 <br /><br />
