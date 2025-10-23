@@ -21,7 +21,7 @@ export default function FAQ() {
         },
         {
           question: "Who's behind the funding plan?",
-          answer: "We're proud to be working with Tom Berekoff, one of British Columbia's leading philanthropic consultants, who helped raise nearly $20 million for the Upper Skeena Recreation Centre in Hazelton, BC — a community much like ours. With his experience and guidance, we're confident Salt Spring can achieve the same success."
+          answer: "We're proud to be working with one of British Columbia's premier philanthropic consultants, who helped raise nearly $20 million for the Upper Skeena Recreation Centre in Hazelton, BC — a community much like ours. With their experience and guidance, we're confident Salt Spring can achieve the same success."
         },
         {
           question: "What is the total cost of the project?",
