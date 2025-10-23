@@ -929,7 +929,7 @@ export default function SSIArenaRedesigned() {
                     We'll be bringing options to the community for a vote — because this team should belong to all of us.
                   </p>
                   <p className="text-slate-700">
-                    And keep your eyes open... you might just see jerseys available at <strong>Mo's Pub</strong> to support our future team before we even drop the puck! 🍻
+                    And keep your eyes open... you might just see jerseys available at <strong>Moby's Pub</strong> to support our future team before we even drop the puck! 🍻
                   </p>
                 </div>
 
