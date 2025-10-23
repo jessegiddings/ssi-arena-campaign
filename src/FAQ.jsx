@@ -42,8 +42,8 @@ export default function FAQ() {
       icon: <Shield className="w-5 h-5" />,
       questions: [
         {
-          question: "Who will own and operate the facility?",
-          answer: "The facility will be owned and operated by the Salt Spring Island Healthy Living Society, a registered non-profit organization established specifically for this purpose. We'll work in partnership with the Capital Regional District (CRD) to ensure transparency, oversight, and long-term accountability."
+          question: "Who will operate the facility?",
+          answer: "The facility will be operated by the Salt Spring Island Healthy Living Society, a registered non-profit organization established specifically for this purpose, working in partnership with the Capital Regional District (CRD) to ensure transparency, oversight, and long-term accountability."
         },
         {
           question: "What if operating costs increase in the future?",
