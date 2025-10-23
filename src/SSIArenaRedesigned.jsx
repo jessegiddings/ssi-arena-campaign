@@ -627,7 +627,7 @@ export default function SSIArenaRedesigned() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <CardContent className="p-8">
+                <CardContent className="pt-10 px-8 pb-8">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center">
                       {feature.icon}
@@ -901,14 +901,70 @@ export default function SSIArenaRedesigned() {
           </Card>
         </div>
 
-        {/* Organization Logo */}
+        {/* Junior A Team Easter Egg */}
+        <div className="mt-16 max-w-4xl mx-auto px-6">
+          <Card className="overflow-hidden border-2 border-amber-300 bg-gradient-to-br from-amber-50/50 to-orange-50/50 shadow-xl">
+            <CardContent className="p-8 md:p-12">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 mb-4 shadow-lg">
+                  <span className="text-3xl">🏒</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+                  Wait... Are We Thinking What You're Thinking?
+                </h3>
+                <p className="text-lg text-slate-600 italic">
+                  If we're building an arena... why not bring a Junior A team to Salt Spring Island?
+                </p>
+              </div>
+
+              <div className="prose prose-lg max-w-none text-slate-700">
+                <p className="text-center leading-relaxed mb-6">
+                  That's a great question — and honestly, we were thinking the exact same thing.
+                </p>
+
+                <p className="leading-relaxed mb-6">
+                  If <strong>Gibsons, BC</strong> can fill 750 seats every week with a Junior A team — and they've got a population of around 6,000 people — then surely <strong>Salt Spring Island</strong>, with over 15,000 residents, can do the same or better.
+                </p>
+
+                <p className="leading-relaxed mb-6">
+                  We've already been in early conversations with the <strong>Pacific Junior Hockey League (PJHL)</strong> about the possibility of a Salt Spring team in the future. While our focus right now is on getting the arena built and funded, we're laying the groundwork so that one day, fans here might be cheering for a home team of our own.
+                </p>
+
+                <div className="bg-white/70 border-l-4 border-amber-500 rounded-r-lg p-6 my-8">
+                  <p className="font-semibold text-slate-900 mb-2">🎨 We're already working on team names!</p>
+                  <p className="text-slate-700 mb-3">
+                    We'll be bringing options to the community for a vote — because this team should belong to all of us.
+                  </p>
+                  <p className="text-slate-700">
+                    And keep your eyes open... you might just see jerseys available at <strong>Mo's Pub</strong> to support our future team before we even drop the puck! 🍻
+                  </p>
+                </div>
+
+                <p className="text-center text-lg font-medium text-slate-800 italic mt-8">
+                  So yes — you could say this idea is on ice... but in the best possible way. 🏒
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Organization Logos */}
         <div className="mt-16 text-center">
-          <div className="max-w-md mx-auto">
-            <img
-              src="/ssicaalogo.png"
-              alt="Salt Spring Island Community Arena Association Logo"
-              className="w-full h-auto"
-            />
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
+            <div>
+              <img
+                src="/ssicaalogo.png"
+                alt="Salt Spring Island Community Arena Association Logo"
+                className="w-full h-auto"
+              />
+            </div>
+            <div>
+              <img
+                src="/IMG_2908.png"
+                alt="Salt Spring Island Healthy Living Society Logo"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
