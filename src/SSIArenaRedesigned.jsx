@@ -306,6 +306,7 @@ export default function SSIArenaRedesigned() {
           <nav className="hidden md:flex gap-6 text-sm font-medium">
             <button onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Vision</button>
             <button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Benefits</button>
+            <Link to="/more-than-hockey" className="hover:text-sky-600 transition-colors">More Than Hockey</Link>
             <button onClick={() => document.getElementById('progress')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Progress</button>
             <button onClick={() => document.getElementById('sign')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Sign & Pledge</button>
             <Link to="/community-benefits" className="hover:text-sky-600 transition-colors">Community Benefits</Link>
