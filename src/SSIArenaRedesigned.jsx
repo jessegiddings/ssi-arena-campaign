@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle2, Mail, Users, HeartHandshake, PiggyBank, BarChart3, ShieldCheck, Send, Trophy, MapPin, Calendar, DollarSign, Target, TrendingUp, Building2, Mountain, Sparkles, Clock, Star } from "lucide-react";
+import { CheckCircle2, Mail, Users, HeartHandshake, PiggyBank, BarChart3, ShieldCheck, Send, Trophy, MapPin, Calendar, DollarSign, Target, TrendingUp, Building2, Mountain, Sparkles, Clock, Star, Lightbulb, Heart, ChevronDown } from "lucide-react";
 import { submitSignature, submitPledge, getCampaignStats, subscribeToStats, getPledgeTier } from "./lib/campaignService.js";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -118,6 +118,7 @@ export default function SSIArenaRedesigned() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [progressData, setProgressData] = useState(DEFAULT_PROGRESS_DATA);
+  const [showResourcesDropdown, setShowResourcesDropdown] = useState(false);
   const [loadingStats, setLoadingStats] = useState(true);
   const [showThankYou, setShowThankYou] = useState(false);
   const [thankYouData, setThankYouData] = useState({});
@@ -303,13 +304,65 @@ export default function SSIArenaRedesigned() {
               <p className="text-xs text-slate-500 -mt-0.5">Registered Non-Profit • Tax Receipts Available • For All Ages</p>
             </div>
           </div>
-          <nav className="hidden md:flex gap-6 text-sm font-medium">
+          <nav className="hidden md:flex gap-6 text-sm font-medium items-center">
             <button onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Vision</button>
             <button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Benefits</button>
             <button onClick={() => document.getElementById('progress')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Progress</button>
+
+            {/* Resources Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setShowResourcesDropdown(!showResourcesDropdown)}
+                onBlur={() => setTimeout(() => setShowResourcesDropdown(false), 200)}
+                className="flex items-center gap-1 hover:text-sky-600 transition-colors"
+              >
+                Resources
+                <ChevronDown className={`w-4 h-4 transition-transform ${showResourcesDropdown ? 'rotate-180' : ''}`} />
+              </button>
+
+              {showResourcesDropdown && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50">
+                  <Link
+                    to="/more-than-hockey"
+                    className="block px-4 py-3 hover:bg-sky-50 transition-colors text-slate-700 hover:text-sky-600"
+                  >
+                    <div className="font-semibold">More Than Hockey</div>
+                    <div className="text-xs text-slate-500">12+ ways to use the arena</div>
+                  </Link>
+                  <Link
+                    to="/economic-impact"
+                    className="block px-4 py-3 hover:bg-sky-50 transition-colors text-slate-700 hover:text-sky-600"
+                  >
+                    <div className="font-semibold">Economic Impact Calculator</div>
+                    <div className="text-xs text-slate-500">See the $2M+ annual impact</div>
+                  </Link>
+                  <Link
+                    to="/community-vision"
+                    className="block px-4 py-3 hover:bg-sky-50 transition-colors text-slate-700 hover:text-sky-600"
+                  >
+                    <div className="font-semibold">Community Vision</div>
+                    <div className="text-xs text-slate-500">Share what you'd host</div>
+                  </Link>
+                  <div className="border-t border-slate-200 my-2"></div>
+                  <Link
+                    to="/community-benefits"
+                    className="block px-4 py-3 hover:bg-sky-50 transition-colors text-slate-700 hover:text-sky-600"
+                  >
+                    <div className="font-semibold">Community Benefits</div>
+                    <div className="text-xs text-slate-500">Research-backed benefits</div>
+                  </Link>
+                  <Link
+                    to="/faq"
+                    className="block px-4 py-3 hover:bg-sky-50 transition-colors text-slate-700 hover:text-sky-600"
+                  >
+                    <div className="font-semibold">FAQ</div>
+                    <div className="text-xs text-slate-500">Common questions answered</div>
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <button onClick={() => document.getElementById('sign')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Sign & Pledge</button>
-            <Link to="/community-benefits" className="hover:text-sky-600 transition-colors">Community Benefits</Link>
-            <Link to="/faq" className="hover:text-sky-600 transition-colors">FAQ</Link>
           </nav>
         </div>
       </header>
@@ -631,6 +684,82 @@ export default function SSIArenaRedesigned() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Explore More Tools Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Explore More Tools</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              See the economic impact and share your vision for what we can build together
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Economic Impact Calculator */}
+            <Link to="/economic-impact">
+              <Card className="h-full overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-green-400 cursor-pointer group">
+                <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-8 text-white">
+                  <DollarSign className="w-16 h-16 mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-3xl font-bold mb-3">Economic Impact Calculator</h3>
+                  <p className="text-green-100 text-lg">Calculate how events will generate millions in local economic activity</p>
+                </div>
+                <CardContent className="p-8">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <p className="text-slate-700">Interactive calculator with 6 event types</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <p className="text-slate-700">See hotel nights, ferry trips, and total impact</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                      <p className="text-slate-700">Conservative estimate: $2M+ annual impact</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex items-center text-green-600 font-semibold group-hover:gap-3 gap-2 transition-all">
+                    <span>Explore Calculator</span>
+                    <TrendingUp className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Community Vision */}
+            <Link to="/community-vision">
+              <Card className="h-full overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 hover:border-purple-400 cursor-pointer group">
+                <div className="bg-gradient-to-br from-purple-500 to-pink-600 p-8 text-white">
+                  <Lightbulb className="w-16 h-16 mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-3xl font-bold mb-3">Community Vision</h3>
+                  <p className="text-purple-100 text-lg">Share what you would host at the arena and see others' ideas</p>
+                </div>
+                <CardContent className="p-8">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                      <p className="text-slate-700">Submit your vision for the arena</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                      <p className="text-slate-700">See what neighbors are imagining</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                      <p className="text-slate-700">From concerts to trade shows to festivals</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 flex items-center text-purple-600 font-semibold group-hover:gap-3 gap-2 transition-all">
+                    <span>Share Your Vision</span>
+                    <Heart className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>

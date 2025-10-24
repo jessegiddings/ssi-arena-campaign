@@ -4,6 +4,9 @@ import CommunityBenefits from './CommunityBenefits.jsx'
 import Petition from './Petition.jsx'
 import Privacy from './Privacy.jsx'
 import FAQ from './FAQ.jsx'
+import MoreThanHockey from './MoreThanHockey.jsx'
+import EconomicImpact from './EconomicImpact.jsx'
+import CommunityVision from './CommunityVision.jsx'
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         <Route path="/petition" element={<Petition />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/more-than-hockey" element={<MoreThanHockey />} />
+        <Route path="/economic-impact" element={<EconomicImpact />} />
+        <Route path="/community-vision" element={<CommunityVision />} />
       </Routes>
     </Router>
   )
