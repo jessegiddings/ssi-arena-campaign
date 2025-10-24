@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, DollarSign, TrendingUp, Users, Calendar, Hotel, Ferry, ShoppingBag, UtensilsCrossed } from "lucide-react";
+import { ArrowLeft, DollarSign, TrendingUp, Users, Calendar, Hotel, Ship, ShoppingBag, UtensilsCrossed } from "lucide-react";
 import SEO from "./components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -347,7 +347,7 @@ export default function EconomicImpact() {
             <Card className="border-2 border-purple-200 bg-gradient-to-br from-white to-purple-50/30">
               <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <Ferry className="w-8 h-8 text-purple-600" />
+                  <Ship className="w-8 h-8 text-purple-600" />
                   <h3 className="text-2xl font-bold text-slate-900">For Transportation</h3>
                 </div>
                 <p className="text-slate-700 leading-relaxed mb-4">
