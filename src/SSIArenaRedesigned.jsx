@@ -494,7 +494,7 @@ export default function SSIArenaRedesigned() {
                 Building Community Support for Salt Spring Island's Arena
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed">
-                Our vision is simple: bring a community ice arena to Salt Spring Island by building it next to the proposed tennis courts at 262 Rainbow Rd. To make this dream a reality, we need to show the Capital Regional District (CRD) that our community wants this facility. Your signature demonstrates public support for our proposal to amend the current future plan for 262 Rainbow Rd. to include an ice rink. These signatures will be presented to the CRD as proof that Salt Spring Island residents are behind this important community project.
+                Our vision is simple: bring a community ice arena to Salt Spring Island by building it next to the proposed tennis courts at 262 Rainbow Rd. To make this dream a reality, we need to demonstrate strong community support for this facility. Your signature shows public backing for our proposal to amend the current future plan for 262 Rainbow Rd. to include an ice rink. These signatures will be presented as proof that Salt Spring Island residents are united behind this important community project.
               </p>
             </div>
 
@@ -512,7 +512,7 @@ export default function SSIArenaRedesigned() {
                 Your Support Makes the Difference
               </h3>
               <p className="text-lg text-slate-700 leading-relaxed">
-                We're asking for two things: your signature to show the CRD that Salt Spring wants this arena, and your financial support to fund the feasibility study that will make it possible. Together, these two actions will transform our community arena from a dream into a funded reality.
+                We're asking for two things: your signature to demonstrate that Salt Spring wants this arena, and your financial support to fund the feasibility study that will make it possible. Together, these two actions will transform our community arena from a dream into a funded reality.
               </p>
             </div>
 
