@@ -43,7 +43,7 @@ export default function FAQ() {
       questions: [
         {
           question: "Who will operate the facility?",
-          answer: "The facility will be operated by the Salt Spring Island Healthy Living Society, a registered non-profit organization established specifically for this purpose, working in partnership with the Capital Regional District (CRD) to ensure transparency, oversight, and long-term accountability."
+          answer: "The facility will be operated by the Salt Spring Island Healthy Living Society, a registered non-profit organization established specifically for this purpose. As a community-led initiative, we're committed to ensuring transparency, local oversight, and long-term accountability to island residents."
         },
         {
           question: "What if operating costs increase in the future?",
@@ -79,11 +79,11 @@ export default function FAQ() {
       questions: [
         {
           question: "When will construction start?",
-          answer: "We're currently in the feasibility and design stage, working closely with the CRD and local partners. Construction will begin only once land use amendments, funding, and environmental approvals are complete — ensuring we move forward responsibly and debt-free."
+          answer: "We're currently in the feasibility and design stage, working collaboratively with regional and local partners. Construction will begin only once land use amendments, funding, and environmental approvals are complete — ensuring we move forward responsibly and debt-free."
         },
         {
           question: "How can I get involved?",
-          answer: "There are many ways to help: Sign the community petition to show your support. Submit a Letter of Intent to donate (no money collected until CRD approval). Share our story and encourage others to join the effort. Every show of support strengthens our case for government and foundation funding."
+          answer: "There are many ways to help: Sign the community petition to show your support. Submit a Letter of Intent to donate (no money collected until the project moves forward). Share our story and encourage others to join the effort. Every show of support strengthens our case for government and foundation funding."
         },
         {
           question: "If we're building an arena… why not bring a Junior A team to Salt Spring Island?",
