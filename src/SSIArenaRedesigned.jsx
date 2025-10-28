@@ -379,7 +379,7 @@ export default function SSIArenaRedesigned() {
             When the community was surveyed in May of 2025, the three things at the top of everyone's list of community needs were: an ice rink, an indoor walking track, and a community fitness center.
           </p>
           <p className="text-2xl md:text-3xl font-bold text-sky-700">
-            So let's build it. What are we waiting for?
+            So let's build it. What is Salt Spring waiting for?
           </p>
         </div>
       </section>
@@ -393,7 +393,7 @@ export default function SSIArenaRedesigned() {
                 Let's build a year‑round arena for Salt Spring Island
               </h2>
               <p className="mt-6 text-lg md:text-xl text-slate-700">
-                We propose a <span className="font-semibold text-sky-700">community ice rink</span>, an <span className="font-semibold text-sky-700">indoor walking track</span>, a <span className="font-semibold text-sky-700">fitness center</span>, and a <span className="font-semibold text-sky-700">curling rink</span> open to everyone—kids, families, and seniors alike.
+                This project will include a <span className="font-semibold text-sky-700">community ice rink</span>, an <span className="font-semibold text-sky-700">indoor walking track</span>, a <span className="font-semibold text-sky-700">fitness center</span>, and a <span className="font-semibold text-sky-700">curling rink</span> open to everyone—kids, families, and seniors alike.
               </p>
               <ul className="mt-8 space-y-4 text-slate-700">
                 <li className="flex items-start gap-3">
@@ -452,7 +452,7 @@ export default function SSIArenaRedesigned() {
           {/* Goal Statement */}
           <div className="max-w-4xl mx-auto px-6 mt-8 text-center">
             <p className="text-sm text-slate-500">
-              <strong>Goal:</strong> We need 2,000 signatures • $5M in community pledges toward a $18–22M project
+              <strong>Goal:</strong> 2,000 signatures • $5M in community pledges toward a $18–22M project
             </p>
           </div>
         </div>
@@ -494,7 +494,7 @@ export default function SSIArenaRedesigned() {
                 Building Community Support for Salt Spring Island's Arena
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed">
-                Our vision is simple: bring a community ice arena to Salt Spring Island by building it next to the proposed tennis courts at 262 Rainbow Rd. To make this dream a reality, we need to demonstrate strong community support for this facility. Your signature shows public backing for our proposal to amend the current future plan for 262 Rainbow Rd. to include an ice rink. These signatures will be presented as proof that Salt Spring Island residents are united behind this important community project.
+                The vision is simple: bring a community ice arena to Salt Spring Island by building it next to the proposed tennis courts at 262 Rainbow Rd. To make this dream a reality, strong community support for this facility must be demonstrated. Your signature shows public backing for the proposal to amend the current future plan for 262 Rainbow Rd. to include an ice rink. These signatures will be presented as proof that Salt Spring Island residents are united behind this important community project.
               </p>
             </div>
 
@@ -503,7 +503,7 @@ export default function SSIArenaRedesigned() {
                 The Path Forward: Feasibility First, Then Major Funding
               </h3>
               <p className="text-lg text-slate-700 leading-relaxed">
-                Before we can pursue major government grants, we need a professional feasibility study that proves our arena is viable and sustainable. This critical first step requires $150,000 in community fundraising. Once we have this feasibility report in hand, we'll be eligible to apply for substantial federal and provincial grants that could fund the majority of the project. Think of your contribution as an investment in unlocking much larger funding opportunities – every dollar raised now helps us access the government support needed to build our arena.
+                Before pursuing major government grants, the Society needs a professional feasibility study that proves the arena is viable and sustainable. This critical first step requires $150,000 in community fundraising. Once the feasibility report is complete, the Society will be eligible to apply for substantial federal and provincial grants that could fund the majority of the project. Think of your contribution as an investment in unlocking much larger funding opportunities – every dollar raised now helps access the government support needed to build the arena.
               </p>
             </div>
 
@@ -512,7 +512,7 @@ export default function SSIArenaRedesigned() {
                 Your Support Makes the Difference
               </h3>
               <p className="text-lg text-slate-700 leading-relaxed">
-                We're asking for two things: your signature to demonstrate that Salt Spring wants this arena, and your financial support to fund the feasibility study that will make it possible. Together, these two actions will transform our community arena from a dream into a funded reality.
+                The Society is asking for two things: your signature to demonstrate that Salt Spring wants this arena, and your financial support to fund the feasibility study that will make it possible. Together, these two actions will transform this community arena from a dream into a funded reality.
               </p>
             </div>
 
@@ -543,7 +543,7 @@ export default function SSIArenaRedesigned() {
             <div>
               <h2 className="text-4xl font-bold mb-6">Inspired by Excellence</h2>
               <p className="text-lg text-slate-700 mb-6">
-                We are in discussions with renowned architect John Hemsworth who designed the award-winning Upper Skeena Recreation Centre in Hazelton BC. This proven design combines stunning West Coast timber architecture with practical, multi-purpose functionality.
+                The Society is in discussions with renowned architect John Hemsworth who designed the award-winning Upper Skeena Recreation Centre in Hazelton BC. This proven design combines stunning West Coast timber architecture with practical, multi-purpose functionality.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -694,7 +694,7 @@ export default function SSIArenaRedesigned() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Explore More Tools</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              See the economic impact and share your vision for what we can build together
+              See the economic impact and share your vision for what Salt Spring can build together
             </p>
           </div>
 
@@ -890,7 +890,7 @@ export default function SSIArenaRedesigned() {
               <div className="md:flex items-start gap-10">
                 <div className="md:w-1/2">
                   <h3 className="text-2xl font-semibold mb-4">Make a non‑binding pledge</h3>
-                  <p className="text-slate-600 mt-2 text-sm">Help us demonstrate community capacity. Pledges are expressions of intent—not donations—and we'll follow up later with formal options (naming rights, corporate sponsorships, tax‑receipted gifts via a registered charity partner).</p>
+                  <p className="text-slate-600 mt-2 text-sm">Help demonstrate community capacity. Pledges are expressions of intent—not donations—and the Society will follow up later with formal options (naming rights, corporate sponsorships, tax‑receipted gifts via a registered charity partner).</p>
 
                   <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-4">
                     {PLEDGE_TIERS.map((t) => (
@@ -1032,16 +1032,16 @@ export default function SSIArenaRedesigned() {
                   <span className="text-3xl">🏒</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
-                  Wait... Are We Thinking What You're Thinking?
+                  Wait... Is the Community Thinking What You're Thinking?
                 </h3>
                 <p className="text-lg text-slate-600 italic">
-                  If we're building an arena... why not bring a Junior A team to Salt Spring Island?
+                  If Salt Spring is building an arena... why not bring a Junior A team to the island?
                 </p>
               </div>
 
               <div className="prose prose-lg max-w-none text-slate-700">
                 <p className="text-center leading-relaxed mb-6">
-                  That's a great question — and honestly, we were thinking the exact same thing.
+                  That's a great question — and honestly, the organizers have been thinking the exact same thing.
                 </p>
 
                 <p className="leading-relaxed mb-6">
@@ -1049,16 +1049,16 @@ export default function SSIArenaRedesigned() {
                 </p>
 
                 <p className="leading-relaxed mb-6">
-                  We've already been in early conversations with the <strong>Pacific Junior Hockey League (PJHL)</strong> about the possibility of a Salt Spring team in the future. While our focus right now is on getting the arena built and funded, we're laying the groundwork so that one day, fans here might be cheering for a home team of our own.
+                  The Society has already been in early conversations with the <strong>Pacific Junior Hockey League (PJHL)</strong> about the possibility of a Salt Spring team in the future. While the focus right now is on getting the arena built and funded, the groundwork is being laid so that one day, fans here might be cheering for a home team.
                 </p>
 
                 <div className="bg-white/70 border-l-4 border-amber-500 rounded-r-lg p-6 my-8">
-                  <p className="font-semibold text-slate-900 mb-2">🎨 We're already working on team names!</p>
+                  <p className="font-semibold text-slate-900 mb-2">🎨 Team names are already in the works!</p>
                   <p className="text-slate-700 mb-3">
-                    We'll be bringing options to the community for a vote — because this team should belong to all of us.
+                    The Society will be bringing options to the community for a vote — because this team should belong to everyone on the island.
                   </p>
                   <p className="text-slate-700">
-                    And keep your eyes open... you might just see jerseys available at <strong>Moby's Pub</strong> to support our future team before we even drop the puck! 🍻
+                    And keep your eyes open... you might just see jerseys available at <strong>Moby's Pub</strong> to support the future team before the puck even drops! 🍻
                   </p>
                 </div>
 
@@ -1130,7 +1130,7 @@ export default function SSIArenaRedesigned() {
               © {new Date().getFullYear()} Salt Spring Island Community Arena Association
             </p>
             <p className="text-slate-500 text-xs mt-2">
-              Building our community's future together
+              Building Salt Spring's future together
             </p>
           </div>
         </div>
