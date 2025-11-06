@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import DonationForm from "./DonationForm";
+import InteracTransfer from "./InteracTransfer";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import SEO, { pageSEO } from "./components/SEO";
 import SocialShare from "./components/SocialShare";
@@ -362,7 +364,7 @@ export default function SSIArenaRedesigned() {
               )}
             </div>
 
-            <button onClick={() => document.getElementById('sign')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-sky-600 transition-colors">Sign & Pledge</button>
+            <button onClick={() => document.getElementById('donate')?.scrollIntoView({ behavior: 'smooth' })} className="px-4 py-2 bg-gradient-to-r from-sky-600 to-blue-700 text-white rounded-lg hover:from-sky-700 hover:to-blue-800 transition-colors font-semibold">Donate Now</button>
           </nav>
         </div>
       </header>
@@ -765,15 +767,15 @@ export default function SSIArenaRedesigned() {
       </section>
 
       {/* Sign Petition Section */}
-      <section id="sign" className="py-20 bg-gradient-to-b from-sky-50 to-white">
-        <div className="max-w-5xl mx-auto px-8">
-          <Card className="shadow-2xl overflow-hidden">
-            <div className="bg-gradient-to-r from-sky-600 to-blue-700 p-8 text-white text-center">
-              <h2 className="text-3xl font-bold mb-3">Sign the Petition</h2>
-              <p className="text-sky-100">Add your voice to support the arena</p>
-            </div>
+      <section id="sign" className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <Card className="shadow-lg border border-slate-200">
+            <CardContent className="pt-8 pb-6 px-8">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Sign the Petition</h3>
+                <p className="text-slate-600">Add your voice to support the arena</p>
+              </div>
 
-            <CardContent className="pt-12 pb-8 px-10">
               {submitted === 'signature' ? (
                 <div className="py-12 text-center">
                   <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -782,7 +784,7 @@ export default function SSIArenaRedesigned() {
                     You're now part of the movement to bring world-class recreation to Salt Spring Island.
                   </p>
                   <p className="text-sm text-slate-500 mt-4">
-                    Want to make a pledge too? Check out the pledge section below!
+                    Want to make a donation too? Check out the donation options below!
                   </p>
                 </div>
               ) : (
@@ -882,102 +884,78 @@ export default function SSIArenaRedesigned() {
         </div>
       </section>
 
-      {/* PLEDGE */}
-      <section id="pledge" className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-8">
-          <Card className="rounded-2xl shadow-lg">
-            <CardContent className="pt-16 pb-10 px-10">
-              <div className="md:flex items-start gap-10">
-                <div className="md:w-1/2">
-                  <h3 className="text-2xl font-semibold mb-4">Make a non‑binding pledge</h3>
-                  <p className="text-slate-600 mt-2 text-sm">Help demonstrate community capacity. Pledges are expressions of intent—not donations—and the Society will follow up later with formal options (naming rights, corporate sponsorships, tax‑receipted gifts via a registered charity partner).</p>
+      {/* DONATIONS */}
+      <section id="donate" className="py-20 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              Support the Arena Project
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Your donation today helps fund the feasibility study and moves Salt Spring Island closer to having a world-class community arena
+            </p>
+          </div>
 
-                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-4">
-                    {PLEDGE_TIERS.map((t) => (
-                      <button key={t.value} onClick={() => setForm((f) => ({ ...f, pledge: t.value }))} className={`border rounded-xl px-3 py-2 text-sm ${form.pledge === t.value ? "border-sky-600 bg-sky-50" : ""}`}>
-                        {t.label}
-                      </button>
-                    ))}
-                  </div>
-                  <div className="mt-4">
-                    <Label htmlFor="custom-pledge-amount">Custom amount</Label>
-                    <div className="flex items-center gap-3 mt-2">
-                      <span className="text-sm">$</span>
-                      <Input
-                        id="custom-pledge-amount"
-                        name="customPledgeAmount"
-                        type="number"
-                        min={0}
-                        value={form.pledge || ""}
-                        onChange={(e) => setForm((f) => ({ ...f, pledge: Number(e.target.value) }))}
-                        className="max-w-[160px]"
-                        placeholder="0"
-                      />
-                    </div>
-                    <p className="text-xs text-slate-500 mt-1">Submit your pledge separately below.</p>
-                  </div>
+          {/* Two Column Layout */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {/* Stripe Donation Form */}
+            <div>
+              <DonationForm />
+            </div>
 
-                  {/* Pledge Form Fields */}
-                  <div className="mt-8 pt-6 border-t border-slate-200">
-                    <h4 className="font-semibold mb-4">Your Contact Information (for pledge follow-up)</h4>
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div>
-                        <Label htmlFor="pledge-firstName" className="text-sm">First name</Label>
-                        <Input
-                          id="pledge-firstName"
-                          name="pledgeFirstName"
-                          value={form.firstName}
-                          onChange={(e) => setForm((f) => ({ ...f, firstName: e.target.value }))}
-                          className="mt-1 text-sm"
-                          placeholder="Your first name"
-                          autoComplete="given-name"
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="pledge-email" className="text-sm">Email</Label>
-                        <Input
-                          id="pledge-email"
-                          name="pledgeEmail"
-                          type="email"
-                          value={form.email}
-                          onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                          className="mt-1 text-sm"
-                          placeholder="your@email.com"
-                          autoComplete="email"
-                        />
-                      </div>
-                    </div>
+            {/* Interac e-Transfer */}
+            <div>
+              <InteracTransfer />
+            </div>
+          </div>
 
-                    <Button
-                      onClick={handlePledgeSubmit}
-                      disabled={!form.pledge || form.pledge <= 0 || !form.firstName || !form.email || submitting}
-                      className="w-full py-3 text-sm font-semibold bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 disabled:opacity-50"
-                    >
-                      {submitting ? "Submitting Pledge..." : `Submit Pledge of $${form.pledge?.toLocaleString() || 0}`}
-                    </Button>
-
-                    {error && error.includes('pledge') && (
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3 mt-3">
-                        <p className="text-sm text-red-700">{error}</p>
-                      </div>
-                    )}
-
-                    {submitted && submitted === 'pledge' && (
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-3 mt-3">
-                        <p className="text-sm text-green-700">✅ Thank you! Your pledge has been recorded.</p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="md:w-1/2 mt-6 md:mt-0">
-                  <h4 className="font-semibold mb-2 flex items-center gap-2"><PiggyBank className="w-4 h-4"/> Benefactor & Sponsor pathways</h4>
-                  <ul className="text-sm text-slate-700 list-disc pl-5 space-y-1">
-                    <li>Founding Benefactor: $100k+ (naming opportunities; board recognition)</li>
-                    <li>Community Builder: $25k–$100k (program endowment options)</li>
-                    <li>Family Patron: $5k–$25k (seat/locker/brick dedications)</li>
-                    <li>Local Business Sponsor: $2.5k+ (dasher boards, events)</li>
+          {/* Sponsorship Opportunities */}
+          <Card className="border-2 border-amber-200 bg-gradient-to-br from-amber-50/50 to-white">
+            <CardContent className="p-8">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-2">
+                  <PiggyBank className="w-6 h-6 text-amber-600" />
+                  Larger Donations & Sponsorship Opportunities
+                </h3>
+                <p className="text-slate-600">
+                  Interested in making a significant impact with naming rights or corporate sponsorship?
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-slate-900 mb-3">Benefactor Levels:</h4>
+                  <ul className="text-sm text-slate-700 space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 font-bold">•</span>
+                      <span><strong>Founding Benefactor:</strong> $100,000+ (naming opportunities, board recognition)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 font-bold">•</span>
+                      <span><strong>Community Builder:</strong> $25,000–$100,000 (program endowment options)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 font-bold">•</span>
+                      <span><strong>Family Patron:</strong> $5,000–$25,000 (seat/locker/brick dedications)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 font-bold">•</span>
+                      <span><strong>Local Business Sponsor:</strong> $2,500+ (dasher boards, events)</span>
+                    </li>
                   </ul>
+                </div>
+                <div className="bg-white rounded-lg p-6 border border-amber-200">
+                  <h4 className="font-semibold text-slate-900 mb-2">Contact the Society</h4>
+                  <p className="text-sm text-slate-700 mb-4">
+                    For major donations, sponsorships, or to discuss custom recognition opportunities, please reach out directly.
+                  </p>
+                  <a
+                    href="mailto:healthylivingssi@gmail.com"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-semibold transition-colors text-sm"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Contact Society
+                  </a>
                 </div>
               </div>
             </CardContent>
