@@ -885,7 +885,7 @@ export default function SSIArenaRedesigned() {
       </section>
 
       {/* DONATIONS */}
-      <section id="donate" className="py-20 bg-gradient-to-b from-white to-slate-50">
+      <section id="donate" className="pt-28 pb-20 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-6xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-12">
@@ -1049,7 +1049,7 @@ export default function SSIArenaRedesigned() {
         </div>
 
         {/* Organization Logos */}
-        <div className="mt-16 text-center">
+        <div className="mt-24 text-center">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
             <div>
               <img
