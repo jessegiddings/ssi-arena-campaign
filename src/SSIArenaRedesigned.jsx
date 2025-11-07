@@ -296,14 +296,14 @@ export default function SSIArenaRedesigned() {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/ssicaalogo.png"
-                alt="Salt Spring Island Community Arena Association Logo"
+                src="/IMG_2908.png"
+                alt="Salt Spring Island Healthy Living Society Logo"
                 className="w-full h-full object-cover"
               />
             </div>
             <div>
-              <h1 className="font-bold text-lg leading-tight">Salt Spring Island Community Arena Association</h1>
-              <p className="text-xs text-slate-500 -mt-0.5">Registered Non-Profit • Tax Receipts Available • For All Ages</p>
+              <h1 className="font-bold text-lg leading-tight">Salt Spring Island Healthy Living Society</h1>
+              <p className="text-xs text-slate-500 -mt-0.5">Registered Non-Profit • For All Ages</p>
             </div>
           </div>
           <nav className="hidden md:flex gap-6 text-sm font-medium items-center">
