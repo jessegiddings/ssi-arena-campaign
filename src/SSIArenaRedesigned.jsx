@@ -464,9 +464,7 @@ export default function SSIArenaRedesigned() {
           <Card className="shadow-xl border-2 border-amber-200 bg-gradient-to-br from-white to-amber-50/30">
             <CardContent className="p-8 md:p-12">
               <blockquote className="text-lg md:text-xl text-slate-700 leading-relaxed mb-6 italic">
-                "Growing up, I know how much having access to an arena shaped my life — not just as a hockey player, but as a person. A rink is more than ice; it's a place where kids learn teamwork, families connect, and communities come together. That's why I'm proud to support the Salt Spring Island Community Arena project. This rink will create opportunities and memories for generations to come.
-                <br /><br />
-                Salt Spring's rink has my support. Your move, Vancouver Canucks — don't let an L.A. Kings guy beat you to cheering for minor hockey in B.C."
+                "Growing up, I know how much having access to an arena shaped my life — not just as a hockey player, but as a person. A rink is more than ice; it's a place where kids learn teamwork, families connect, and communities come together. That's why I'm proud to support the Salt Spring Island Community Arena project. This rink will create opportunities and memories for generations to come."
               </blockquote>
 
               <div className="flex items-center gap-4 pt-6 border-t border-amber-200">
